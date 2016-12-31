@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href={% static "semantic/semantic.min.css" %}/>
+    <link rel="stylesheet" type="text/css" href={% static "css/font-face.css" %}/>
+    <script type="text/javascript" src={% static "semantic/semantic.min.js" %}></script>
+    <style>
+        body {
+            font-family: 'BYek';
+            direction: rtl;
+        }
+
+        .field {
+            font-size: 1.5em;
+        }
+
+    </style>
+</head>
+<body>
+{% if search_is_done %}
+    <div style="position: relative;margin: 50px 20% 25px 20%">
+        {% for doctor in doctors %}
+            <div class="ui red message">
+                <div class="header">
+                    {{ doctor.user.username }}
+                </div>
+                <ul class="list">
+                    <li>{{ doctor.madrak }}</li>
+                    <li>{{ doctor.university }}</li>
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div style="position: relative;margin: 50px 20% 25px 20%">
+        <form class="ui form" action="" method="post">
+            {% csrf_token %}
+            <h1 style="font-family: 'XB Titre';position: relative;text-align: center">پزشک خود را جستجو کنید...</h1>
+            <div class="field">
+                <label>تخصص پزشک</label>
+                <input id="expertise" type="text" name="expertise" placeholder="غدد داخلی">
+            </div>
+            <div class="field">
+                <label>محل مطب</label>
+                <input id="place" type="text" name="place" placeholder="تهران">
+            </div>
+            <div class="field">
+                <label>ساعات پذیرش</label>
+                <input id="time" type="text" name="time" placeholder="۱۴ الی ۱۶">
+            </div>
+            <div class="field">
+                <label>بیمه های تحت پوشش</label>
+                <input id="insurance" type="text" name="insurance" placeholder="بیمه ایران">
+            </div>
+            <button style="margin: 0 45% 0 45%; " class="ui button" type="submit">جستجو</button>
+        </form>
+    </div>
+{% endif %}
+</body>
+</html>

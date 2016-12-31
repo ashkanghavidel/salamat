@@ -1,0 +1,9 @@
+{% load static %}
+{% for field in doctor_form %}
+    <p class="setting">{{ field.label }}<span><input value="{{ field.value }}"><img
+            src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
+{% endfor %}
+{% for field in doctor_degree_form %}
+    <p class="setting">{{ field.label }}<span><input value="{{ field.value }}"><img
+            src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
+{% endfor %}
