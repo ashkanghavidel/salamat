@@ -51,6 +51,7 @@ NOSE_ARGS = [
 PROJECT_APPS = [
                 'doctor',
                 'patient',
+                'main_Side',
                 ]
 INSTALLED_APPS += PROJECT_APPS
 

@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
                   url(r'^doctor/', include('doctor.urls')),
                   url(r'^patient/', include('patient.urls')),
+                  url(r'^main_Side/', include('main_Side.urls')),
                   url(r'^admin/', admin.site.urls),
                   url(r'^api-token-auth/', obtain_jwt_token),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

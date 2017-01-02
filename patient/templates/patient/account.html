@@ -1,0 +1,112 @@
+{% load static %}
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>User Profile </title>
+    <meta name="author" content="Jake Rocheleau">
+    <link rel="shortcut icon" href="http://designshack.net/favicon.ico">
+    <link rel="icon" href="http://designshack.net/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="all" href={% static "doctor/css/account-style.css" %}>
+    <script type="text/javascript" src={% static "js/jquery-1.10.2.min.js" %}></script>
+    <link rel="stylesheet" href={% static "css/jquery-ui.css" %}>
+    <script src={% static "js/jquery-ui.min.js" %}></script>
+    <script src={% static "js/jquery-3.0.0.min.js" %}></script>
+    <link rel="stylesheet" type="text/css" href={% static "semantic/semantic.min.css" %}/>
+    <link rel="stylesheet" type="text/css" href={% static "css/font-face.css" %}/>
+    <script type="text/javascript" src={% static "semantic/semantic.min.js" %}></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="w">
+    <div id="content" class="clearfix">
+        <div id="userphoto"><img src="{{ patient.picture.url }}" alt="default avatar"></div>
+        <h2 style="direction:rtl;font-family: 'X Dorosht'"> مراجع محترم {{ user.first_name }} {{ user.last_name }}  </h2>
+
+        <nav id="profiletabs">
+            <ul class="clearfix">
+                <li><a href="#bio" clas>دریافت نوبت</a></li>
+                <li><a href="#activity">وضعیت</a></li>
+                <li><a href="#friends">پیام ها</a></li>
+                <li><a id="tosetting" href="#settings">تنظیمات</a></li>
+            </ul>
+        </nav>
+
+        <section id="bio" style="text-align: right">
+
+        </section>
+
+        <section id="activity" class="hidden">
+        </section>
+
+        <section id="friends" class="hidden">
+        </section>
+
+        <section id="settings" class="hidden" style="text-align: right">
+            <p>Edit your user settings:</p>
+            <form method="post" action="edit-information/">
+                {% csrf_token %}
+                <p class="setting">نام<span><input readonly value="{{ user.first_name }}"><img
+                        src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
+
+                <p class="setting">نام خانوادگی<span><input readonly value="{{ user.last_name }}"><img
+                        src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
+
+                <p class="setting">کد ملی<span><input readonly name="nationalId" value="{{ patient.nationalId }}"><img
+                        src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
+
+                <p class="setting">پست الکترونیکی<span><input name="email" value="{{ user.email }}"><img
+                        src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
+
+                <p class="setting">شماره تلفن<span><input name="phone-number" value="{{ patient.phoneNumber }}"><img
+                        src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
+
+                <button type="submit" class="ui primary button">
+                    Save
+                </button>
+            </form>
+
+
+            {#            <p class="setting"> None<span>Connected Accounts <img#}
+            {#                    src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>#}
+        </section>
+    </div><!-- @end #content -->
+</div><!-- @end #w -->
+<script type="text/javascript">
+    $(function () {
+        $('#profiletabs ul li a').on('click', function (e) {
+            e.preventDefault();
+            var newcontent = $(this).attr('href');
+
+            $('#profiletabs ul li a').removeClass('sel');
+            $(this).addClass('sel');
+
+            $('#content section').each(function () {
+                if (!$(this).hasClass('hidden')) {
+                    $(this).addClass('hidden');
+                }
+            });
+
+            $(newcontent).removeClass('hidden');
+        });
+    });
+</script>
+{#<script>#}
+{#    $(document).ready(function () {#}
+{#        $("#tosetting").click(function () {#}
+{#            $.get("edit-information/", function (data, status) {#}
+{#                $("#edit-ajax").html(data);#}
+{#            });#}
+{#        });#}
+{#    });#}
+{#</script>#}
+<script>
+    $(document).ready(function () {
+        $("#datepicker").datepicker();
+    });
+</script>
+</body>
+</html>

@@ -51,11 +51,7 @@ def register(request):
             doctor_degree = doctor_degree_form.save()
             doctor.doctorDegree = doctor_degree
             doctor.save()
-            # contractFile = Document(contractFile=request.FILES['contractFile'])
-            # contractFile = request.FILES['contractFile']
-            # contractFile.save()
-            registered = True
-
+            return HttpResponseRedirect('/main_Side/Welcome_to_Salamat/')
 
         else:
             print(user_form.errors, doctor_form.errors)
@@ -80,7 +76,7 @@ def user_login(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                return HttpResponse('login done')
+                return HttpResponseRedirect('/main_Side/Welcome_to_Salamat/', {'user':request.user})
             else:
                 return HttpResponse('register/')
         else:
@@ -93,8 +89,7 @@ def user_login(request):
 @login_required
 def user_logout(request):
     logout(request)
-    return HttpResponse('logout done')
-
+    return HttpResponseRedirect('/main_Side/Welcome_to_Salamat')
 
 def time(request):
     return render(request, 'doctor/time-table.html', {})
@@ -103,11 +98,12 @@ def time(request):
 def search(request):
     search_is_done = False
     if request.method == 'POST':
-        expertise = request.POST['expertise']
-        place = request.POST['place']
-        time = request.POST['time']
-        insurance = request.POST['insurance']
-        doctors = Doctor.objects.filter(madrak=expertise)
+        expertise = request.POST['degree-title']
+        # place = request.POST['place']
+        # time = request.POST['time']
+        # insurance = request.POST['insurance']
+        degree = DoctorDegree.objects.get(degreeTitle=expertise)
+        doctors = Doctor.objects.filter(doctorDegree=degree)
         search_is_done = True
         return render(request, 'doctor/search.html', {'doctors': doctors, 'search_is_done': search_is_done})
     return render(request, 'doctor/search.html', {'search_is_done': search_is_done})

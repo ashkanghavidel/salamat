@@ -37,7 +37,7 @@ class Doctor(models.Model):
     office = models.OneToOneField(Office,null=True)
     nationalID = models.CharField(max_length=10,unique=True)
     doctorDegree = models.OneToOneField(DoctorDegree)
-    visitDuration = models.IntegerField(null=True)
+    visitDuration = models.IntegerField(max_length=4,null=True)
     contractFile = models.FileField(upload_to='media/user_contract',null=True)
     resume = models.FileField(upload_to='media/user_resume',null=True)
     picture = models.ImageField(upload_to='media/user_picture',null=True)

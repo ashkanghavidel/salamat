@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b2f2aed0-ed05-47f6-b20d-ce661e78fec5" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/patient/templates/patient/registerlogin.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/static/doctor/img/bg.jpg" afterPath="$PROJECT_DIR$/doctor/static/doctor/img/bg.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/static/doctor/img/edit.png" afterPath="$PROJECT_DIR$/doctor/static/doctor/img/edit.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/static/patient/img/bg.jpg" afterPath="$PROJECT_DIR$/patient/static/patient/img/bg.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BBadr.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BBadr.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BBadr.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BBadr.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BBadr.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BBadr.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BBaran.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BBaran.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BBaran.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BBaran.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BBaran.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BBaran.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BBardiya.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BBardiya.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BBardiya.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BBardiya.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BBardiya.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BBardiya.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BCompset.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BCompset.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BCompset.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BCompset.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BCompset.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BCompset.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BDavat.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BDavat.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BDavat.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BDavat.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BDavat.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BDavat.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BElham.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BElham.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BElham.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BElham.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BElham.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BElham.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BEsfehanBold.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BEsfehanBold.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BEsfehanBold.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BEsfehanBold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BEsfehanBold.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BEsfehanBold.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BFantezy.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BFantezy.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BFantezy.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BFantezy.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BFantezy.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BFantezy.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BFarnaz.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BFarnaz.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BFarnaz.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BFarnaz.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BFarnaz.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BFarnaz.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BFerdosi.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BFerdosi.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BFerdosi.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BFerdosi.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BFerdosi.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BFerdosi.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BHamid.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BHamid.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BHamid.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BHamid.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BHamid.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BHamid.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BHelal.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BHelal.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BHelal.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BHelal.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BHelal.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BHelal.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BHoma.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BHoma.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BHoma.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BHoma.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BHoma.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BHoma.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BJadidBold.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BJadidBold.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BJadidBold.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BJadidBold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BJadidBold.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BJadidBold.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BJalal.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BJalal.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BJalal.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BJalal.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BJalal.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BJalal.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BKoodakBold.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BKoodakBold.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BKoodakBold.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BKoodakBold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BKoodakBold.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BKoodakBold.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BKourosh.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BKourosh.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BKourosh.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BKourosh.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BKourosh.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BKourosh.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BLotus.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BLotus.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BLotus.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BLotus.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BLotus.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BLotus.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BMahsa.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BMahsa.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BMahsa.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BMahsa.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BMahsa.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BMahsa.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BMehrBold.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BMehrBold.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BMehrBold.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BMehrBold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BMehrBold.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BMehrBold.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BMitra.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BMitra.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BMitra.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BMitra.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BMitra.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BMitra.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BMorvarid.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BMorvarid.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BMorvarid.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BMorvarid.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BMorvarid.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BMorvarid.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BNarm.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BNarm.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BNarm.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BNarm.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BNarm.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BNarm.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BNasimBold.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BNasimBold.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BNasimBold.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BNasimBold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BNasimBold.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BNasimBold.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BNazanin.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BNazanin.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BNazanin.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BNazanin.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BNazanin.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BNazanin.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BRoya.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BRoya.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BRoya.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BRoya.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BRoya.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BRoya.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BSetarehBold.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BSetarehBold.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BSetarehBold.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BSetarehBold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BSetarehBold.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BSetarehBold.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BShiraz.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BShiraz.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BShiraz.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BShiraz.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BShiraz.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BShiraz.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BSinaBold.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BSinaBold.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BSinaBold.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BSinaBold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BSinaBold.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BSinaBold.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTabassom.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BTabassom.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTabassom.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BTabassom.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTabassom.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BTabassom.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTehran.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BTehran.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTehran.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BTehran.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTehran.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BTehran.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTitrBold.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BTitrBold.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTitrBold.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BTitrBold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTitrBold.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BTitrBold.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTitrTGEBold.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BTitrTGEBold.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTitrTGEBold.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BTitrTGEBold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTitrTGEBold.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BTitrTGEBold.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTraffic.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BTraffic.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTraffic.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BTraffic.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BTraffic.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BTraffic.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BVahidBold.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BVahidBold.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BVahidBold.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BVahidBold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BVahidBold.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BVahidBold.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BYagut.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BYagut.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BYagut.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BYagut.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BYagut.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BYagut.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BYas.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BYas.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BYas.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BYas.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BYas.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BYas.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BYekan.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BYekan.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BYekan.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BYekan.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BYekan.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BYekan.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BZar.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BZar.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BZar.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BZar.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BZar.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BZar.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BZiba.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BZiba.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BZiba.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BZiba.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BZiba.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BZiba.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/bullet.png" afterPath="$PROJECT_DIR$/static/img/bullet.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Salamat.iml" afterPath="$PROJECT_DIR$/.idea/Salamat.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Salamat/settings.py" afterPath="$PROJECT_DIR$/Salamat/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Salamat/urls.py" afterPath="$PROJECT_DIR$/Salamat/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Salamat/wsgi.py" afterPath="$PROJECT_DIR$/Salamat/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/Serializers.py" afterPath="$PROJECT_DIR$/doctor/Serializers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/__init__.py" afterPath="$PROJECT_DIR$/doctor/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/admin.py" afterPath="$PROJECT_DIR$/doctor/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/apps.py" afterPath="$PROJECT_DIR$/doctor/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/forms.py" afterPath="$PROJECT_DIR$/doctor/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/doctor/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/0002_auto_20161229_0623.py" afterPath="$PROJECT_DIR$/doctor/migrations/0002_auto_20161229_0623.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/0003_auto_20161229_1516.py" afterPath="$PROJECT_DIR$/doctor/migrations/0003_auto_20161229_1516.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/0004_auto_20161229_1532.py" afterPath="$PROJECT_DIR$/doctor/migrations/0004_auto_20161229_1532.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/0005_doctor_picture.py" afterPath="$PROJECT_DIR$/doctor/migrations/0005_doctor_picture.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/0006_auto_20161230_2117.py" afterPath="$PROJECT_DIR$/doctor/migrations/0006_auto_20161230_2117.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/0007_auto_20161230_2123.py" afterPath="$PROJECT_DIR$/doctor/migrations/0007_auto_20161230_2123.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/__init__.py" afterPath="$PROJECT_DIR$/doctor/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/models.py" afterPath="$PROJECT_DIR$/doctor/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/static/doctor/css/account-style.css" afterPath="$PROJECT_DIR$/doctor/static/doctor/css/account-style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/static/doctor/css/reg-login-animat.css" afterPath="$PROJECT_DIR$/doctor/static/doctor/css/reg-login-animat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/static/doctor/css/reg-login-demo.css" afterPath="$PROJECT_DIR$/doctor/static/doctor/css/reg-login-demo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/static/doctor/css/reg-login-style.css" afterPath="$PROJECT_DIR$/doctor/static/doctor/css/reg-login-style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/static/doctor/js/time-table-modernizr.js" afterPath="$PROJECT_DIR$/doctor/static/doctor/js/time-table-modernizr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/templates/doctor/account.html" afterPath="$PROJECT_DIR$/doctor/templates/doctor/account.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/templates/doctor/edit-profile-ajax.html" afterPath="$PROJECT_DIR$/doctor/templates/doctor/edit-profile-ajax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/templates/doctor/register-login.html" afterPath="$PROJECT_DIR$/doctor/templates/doctor/register-login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/templates/doctor/search.html" afterPath="$PROJECT_DIR$/doctor/templates/doctor/search.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/test/test_forms.py" afterPath="$PROJECT_DIR$/doctor/test/test_forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/test/test_models.py" afterPath="$PROJECT_DIR$/doctor/test/test_models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/test/test_views.py" afterPath="$PROJECT_DIR$/doctor/test/test_views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/tests.py" afterPath="$PROJECT_DIR$/doctor/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/urls.py" afterPath="$PROJECT_DIR$/doctor/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/views.py" afterPath="$PROJECT_DIR$/doctor/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/Serializers.py" afterPath="$PROJECT_DIR$/patient/Serializers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/__init__.py" afterPath="$PROJECT_DIR$/patient/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/admin.py" afterPath="$PROJECT_DIR$/patient/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/apps.py" afterPath="$PROJECT_DIR$/patient/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/forms.py" afterPath="$PROJECT_DIR$/patient/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/patient/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/migrations/0002_auto_20161229_1255.py" afterPath="$PROJECT_DIR$/patient/migrations/0002_auto_20161229_1255.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/migrations/__init__.py" afterPath="$PROJECT_DIR$/patient/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/models.py" afterPath="$PROJECT_DIR$/patient/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/static/patient/css/reg-login-animat.css" afterPath="$PROJECT_DIR$/patient/static/patient/css/reg-login-animat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/static/patient/css/reg-login-demo.css" afterPath="$PROJECT_DIR$/patient/static/patient/css/reg-login-demo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/static/patient/css/reg-login-style.css" afterPath="$PROJECT_DIR$/patient/static/patient/css/reg-login-style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/test/test_forms.py" afterPath="$PROJECT_DIR$/patient/test/test_forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/test/test_models.py" afterPath="$PROJECT_DIR$/patient/test/test_models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/test/test_views.py" afterPath="$PROJECT_DIR$/patient/test/test_views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/tests.py" afterPath="$PROJECT_DIR$/patient/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/urls.py" afterPath="$PROJECT_DIR$/patient/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/views.py" afterPath="$PROJECT_DIR$/patient/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/font-face.css" afterPath="$PROJECT_DIR$/static/css/font-face.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/style.css" afterPath="$PROJECT_DIR$/static/css/fonts/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/jquery-ui.css" afterPath="$PROJECT_DIR$/static/css/jquery-ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/jquery-1.10.2.min.js" afterPath="$PROJECT_DIR$/static/js/jquery-1.10.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/jquery-ui.min.js" afterPath="$PROJECT_DIR$/static/js/jquery-ui.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/.versions" afterPath="$PROJECT_DIR$/static/semantic/.versions" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/LICENSE" afterPath="$PROJECT_DIR$/static/semantic/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/README.md" afterPath="$PROJECT_DIR$/static/semantic/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/components/colorize.js" afterPath="$PROJECT_DIR$/static/semantic/components/colorize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/components/colorize.min.js" afterPath="$PROJECT_DIR$/static/semantic/components/colorize.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/components/container.css" afterPath="$PROJECT_DIR$/static/semantic/components/container.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/components/container.min.css" afterPath="$PROJECT_DIR$/static/semantic/components/container.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/components/embed.css" afterPath="$PROJECT_DIR$/static/semantic/components/embed.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/components/embed.js" afterPath="$PROJECT_DIR$/static/semantic/components/embed.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/components/embed.min.css" afterPath="$PROJECT_DIR$/static/semantic/components/embed.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/components/embed.min.js" afterPath="$PROJECT_DIR$/static/semantic/components/embed.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/components/visit.js" afterPath="$PROJECT_DIR$/static/semantic/components/visit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/components/visit.min.js" afterPath="$PROJECT_DIR$/static/semantic/components/visit.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/npm-debug.log" afterPath="$PROJECT_DIR$/static/semantic/npm-debug.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/package.js" afterPath="$PROJECT_DIR$/static/semantic/package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/package.json" afterPath="$PROJECT_DIR$/static/semantic/package.json" />
+    </list>
+    <ignored path="Salamat.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Salamat" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="lru_cache.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Python/2.6/site-packages/django/utils/lru_cache.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/doctor/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/doctor/models.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Salamat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Salamat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Salamat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Salamat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Salamat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doctor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="true" />
+  </component>
+  <component name="RunManager" selected="Django server.Salamat">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Salamat" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Salamat" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Salamat" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Salamat" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Salamat" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="Salamat" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Salamat" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Salamat" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Salamat" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Salamat" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Salamat" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Salamat" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="DJANGO_SETTINGS_MODULE" value="Salamat.settings" />
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Salamat" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Django server.Salamat" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b2f2aed0-ed05-47f6-b20d-ce661e78fec5" name="Default" comment="" />
+      <created>1483178523445</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1483178523445</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="manage.py@Salamat" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25885227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.502442" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.497558" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file:///Library/Python/2.6/site-packages/django/utils/lru_cache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctor/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.6/site-packages/django/utils/lru_cache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.6/site-packages/django/utils/lru_cache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctor/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.6/site-packages/django/utils/lru_cache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctor/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
