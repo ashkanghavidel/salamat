@@ -17,6 +17,10 @@
     <link rel="stylesheet" type="text/css" href={% static "css/font-face.css" %}/>
     <script type="text/javascript" src={% static "semantic/semantic.min.js" %}></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href={% static "css/jquery-ui.css" %}>
+    <script src={% static "js/jquery-1.10.2.min.js" %}></script>
+    <script src={% static "js/jquery-ui.min.js" %}></script>
 </head>
 
 <body>
@@ -29,9 +33,11 @@
         <nav id="profiletabs">
             <ul class="clearfix">
                 <li><a href="#bio" clas>زمانبندی</a></li>
-                <li><a href="#activity">برنامه هفتگی</a></li>
-                <li><a href="#friends">پیام ها</a></li>
+                <li><a id="toactivity" href="#activity">برنامه هفتگی</a></li>
+                <li><a id="topending" href="#pending">پیام ها</a></li>
+                <li><a href="#complementary">اطلاعات تکمیلی</a></li>
                 <li><a id="tosetting" href="#settings">تنظیمات</a></li>
+
             </ul>
         </nav>
 
@@ -53,26 +59,36 @@
         </section>
 
         <section id="activity" class="hidden">
-            <div>
-
-                {% for key, value in visitDic.items %}
-
-                    <p>{{ key }}</p>
-                    {#                    <div class="days">{{ key }}#}
-                    {#                    </div>#}
-                    {#                    <div class="times">#}
-                    {#                        {% for timeInDay in value %}#}
-                    {#                            <div class="boxed">{{ timeInDay }}slaam</div>#}
-                    {#                        {% endfor %}#}
-                    {#                    </div>#}
-                {% endfor %}
-
-
-            </div>
-            </p>
         </section>
 
-        <section id="friends" class="hidden">
+        <section id="pending" class="hidden">
+        </section>
+
+        <section id="complementary" class="hidden">
+            <form method="post" action="complete-information/">
+                {% csrf_token %}
+                <p class="setting">آدرس مطب<span><input name="address"
+                                                        value="{{ doctor.office.address }}"><img
+                        src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
+
+                <p class="setting">شماره تلفن مطب<span><input name="telephone"
+                                                              value="{{ doctor.office.telephone }}"><img
+                        src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
+
+                <p class="setting">بیمه های تحت پوشش<span><input readonly name="insurance" value="
+                        {% for insur in insurances %}{{ insur.name }} ,{% endfor %}"><img
+                        src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
+
+                <p class="setting">بیمه اضافه کنید<span><input name="added-insurance"><img
+                        src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
+
+                <p class="setting">بیمه حذف کنید<span><input name="removed-insurance"><img
+                        src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
+                <button type="submit" class="ui primary button">
+                    Save
+                </button>
+            </form>
+
         </section>
 
         <section id="settings" class="hidden" style="text-align: right">
@@ -94,7 +110,8 @@
                 <p class="setting">دانشگاه محل تحصیل<span><input name="university" value="{{ degree.university }}"><img
                         src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
 
-                <p class="setting">مدت زمان ملاقات<span><input name="visitDuration" value="{{ doctor.visitDuration }}"><img
+                <p class="setting">مدت زمان ملاقات<span><input name="visitDuration"
+                                                               value="{{ doctor.visitDuration }}"><img
                         src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
 
                 <button type="submit" class="ui primary button">
@@ -127,15 +144,22 @@
         });
     });
 </script>
-{#<script>#}
-{#    $(document).ready(function () {#}
-{#        $("#tosetting").click(function () {#}
-{#            $.get("edit-information/", function (data, status) {#}
-{#                $("#edit-ajax").html(data);#}
-{#            });#}
-{#        });#}
-{#    });#}
-{#</script>#}
+<script>
+    $(document).ready(function () {
+        $("#toactivity").click(function () {
+            $.get("time-table/", function (data, status) {
+                $("#activity").html(data);
+            });
+        });
+    });
+    $(document).ready(function () {
+        $("#topending").click(function () {
+            $.get("show-pending/", function (data, status) {
+                $("#pending").html(data);
+            });
+        });
+    });
+</script>
 <script>
     $(document).ready(function () {
         $("#datepicker").datepicker();

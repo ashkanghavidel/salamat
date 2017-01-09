@@ -23,26 +23,26 @@
 
 <div id="w">
     <div id="content" class="clearfix">
-        <div id="userphoto"><img src="{{ patient.picture.url }}" alt="default avatar"></div>
+{#        <div id="userphoto"><img src="{{ patient.picture.url }}" alt="default avatar"></div>#}
         <h2 style="direction:rtl;font-family: 'X Dorosht'"> مراجع محترم {{ user.first_name }} {{ user.last_name }}  </h2>
 
         <nav id="profiletabs">
             <ul class="clearfix">
-                <li><a href="#bio" clas>دریافت نوبت</a></li>
-                <li><a href="#activity">وضعیت</a></li>
-                <li><a href="#friends">پیام ها</a></li>
+                <li><a id="tosearch"> جستجو پزشکان</a></li>
+                <li><a id="toremain-request" href="#remain-request">درخواست های بررسی نشده</a></li>
+                <li><a id="toaccepted-request" href="#accepted-request">درخواست های تایید شده</a></li>
+                <li><a id="torejected-request" href="#rejected-request">درخواست های رد شده</a></li>
                 <li><a id="tosetting" href="#settings">تنظیمات</a></li>
             </ul>
         </nav>
 
-        <section id="bio" style="text-align: right">
-
+        <section id="remain-request" class="hidden">
         </section>
 
-        <section id="activity" class="hidden">
+        <section id="accepted-request" class="hidden">
         </section>
 
-        <section id="friends" class="hidden">
+        <section id="rejected-request" class="hidden">
         </section>
 
         <section id="settings" class="hidden" style="text-align: right">
@@ -94,18 +94,35 @@
         });
     });
 </script>
-{#<script>#}
-{#    $(document).ready(function () {#}
-{#        $("#tosetting").click(function () {#}
-{#            $.get("edit-information/", function (data, status) {#}
-{#                $("#edit-ajax").html(data);#}
-{#            });#}
-{#        });#}
-{#    });#}
-{#</script>#}
 <script>
     $(document).ready(function () {
         $("#datepicker").datepicker();
+    });
+    $(document).ready(function () {
+        $("#toremain-request").click(function () {
+            $.get("show-request/remained", function (data, status) {
+                $("#remain-request").html(data);
+            });
+        });
+    });
+    $(document).ready(function () {
+        $("#toaccepted-request").click(function () {
+            $.get("show-request/accepted", function (data, status) {
+                $("#accepted-request").html(data);
+            });
+        });
+    });
+    $(document).ready(function () {
+        $("#torejected-request").click(function () {
+            $.get("show-request/rejected", function (data, status) {
+                $("#rejected-request").html(data);
+            });
+        });
+    });
+    $(document).ready(function () {
+        $("#tosearch").click(function () {
+            window.location.replace("/doctor/search/");
+        });
     });
 </script>
 </body>

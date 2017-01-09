@@ -1,0 +1,69 @@
+{% load static %}
+<!doctype html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>User Profile </title>
+    {#    <meta name="author" content="Jake Rocheleau">#}
+    {#    <link rel="shortcut icon" href="http://designshack.net/favicon.ico">#}
+    {#    <link rel="icon" href="http://designshack.net/favicon.ico">#}
+    {#    <link rel="stylesheet" type="text/css" media="all" href={% static "doctor/css/account-style.css" %}>#}
+    {#    <script type="text/javascript" src={% static "js/jquery-1.10.2.min.js" %}></script>#}
+    {#    <link rel="stylesheet" href={% static "css/jquery-ui.css" %}>#}
+    {#    <script src={% static "js/jquery-ui.min.js" %}></script>#}
+    <link rel="stylesheet" type="text/css" href={% static "semantic/semantic.min.css" %}/>
+    <link rel="stylesheet" type="text/css" href={% static "css/font-face.css" %}/>
+    <script type="text/javascript" src={% static "semantic/semantic.min.js" %}></script>
+    <link rel="stylesheet" type="text/css" href={% static "doctor/css/time-table.css" %}/>
+
+</head>
+
+<body>
+<div class="ui cards">
+    {% for visit_map in visitTimeIntervalMaps %}
+        <div class="card">
+            <div class="content">
+                <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+                <div class="header">
+                    {{ visit_map.patient.user.username }}
+                </div>
+                <div class="meta">
+                    {{ visit_map.visitTimeInterval.dailyTimeTable.date }}
+                </div>
+                <div class="description">
+                    یک ملاقات از شما برای این زمان درخواست داده شده است.{{ visit_map.visitTimeInterval.startTime }}
+                    - {{ visit_map.visitTimeInterval.endTime }}
+                </div>
+            </div>
+            <div class="extra content">
+                <div class="ui two buttons">
+                    <form method="post" id="{{ visit_map.id }}f" class="response-form">
+                        {% csrf_token %}
+                        <input type="hidden" value="{{ visit_map.id }}" name="visit-map-id">
+                    </form>
+                    <div id="{{ visit_map.id }}" class="ui basic green button">تایید</div>
+                    <div id="{{ visit_map.id }}" class="ui basic red button">رد</div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $(".ui.basic.green.button").click(function () {
+            $.post("accept-reject-request/accept", $('#'.concat($(this).attr('id').concat('f'))).serialize(), function (data, status) {
+                {#                alert($(this).attr(id));#}
+            });
+        });
+    });
+    $(document).ready(function () {
+        $(".ui.basic.red.button").click(function () {
+            $.post("accept-reject-request/reject", $('#'.concat($(this).attr('id').concat('f'))).serialize(), function (data, status) {
+                {#                alert($(this).attr(id));#}
+            });
+        });
+    });
+</script>

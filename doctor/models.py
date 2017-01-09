@@ -12,9 +12,16 @@ class Office(models.Model):
     address = models.CharField(max_length=150)
     telephone = models.CharField(max_length=12)
 
-    def __unicode__(self):
+    def __str__(self):
         return "%s - %s" % (self.address,self.telephone)
 
+DOCTOR_NAME_CHOICES = (
+    ('aa', 'داخلی و غدد'),
+    ('ab', 'عمومی'),
+    ('ac', 'اورولوژی'),
+    ('ad', 'زنان'),
+    ('ae', 'گوارش'),
+)
 
 class DoctorDegree(models.Model):
     university = models.CharField(max_length=200)
@@ -26,9 +33,9 @@ class DoctorDegree(models.Model):
         ('JR', 'جراح'),
     )
     degree = models.CharField(max_length=2, choices=DOCTOR_DEGREE_CHOICES, default='GL')
-    degreeTitle = models.CharField(max_length=40)
+    degreeTitle = models.CharField(max_length=2, choices=DOCTOR_NAME_CHOICES, default='aa')
 
-    def __unicode__(self):
+    def __str__(self):
         return "%s - %s" % (self.university,self.endOfGraduate)
 
 
@@ -37,12 +44,12 @@ class Doctor(models.Model):
     office = models.OneToOneField(Office,null=True)
     nationalID = models.CharField(max_length=10,unique=True)
     doctorDegree = models.OneToOneField(DoctorDegree)
-    visitDuration = models.IntegerField(max_length=4,null=True)
+    visitDuration = models.IntegerField(default=1,max_length=4,null=True)
     contractFile = models.FileField(upload_to='media/user_contract',null=True)
     resume = models.FileField(upload_to='media/user_resume',null=True)
     picture = models.ImageField(upload_to='media/user_picture',null=True)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.user.username
 
 
@@ -53,7 +60,10 @@ class DailyTimeTable(models.Model):
     date = models.DateField()
     doctor = models.ForeignKey(Doctor)
 
-    def __unicode__(self):
+    class Meta:
+        ordering = ['date']
+
+    def __str__(self):
         return "%s - %s" % (self.date,self.doctor.nationalID)
 
 
@@ -61,8 +71,9 @@ class VisitTimeInterval(models.Model):
     startTime = models.TimeField()
     endTime = models.TimeField()
     dailyTimeTable = models.ForeignKey(DailyTimeTable, on_delete=models.CASCADE)
+    status = models.BooleanField(default=False)
 
-    def __unicode__(self):
+    def __str__(self):
         return "%s - %s" % (self.startTime,self.endTime)
 
 
@@ -70,9 +81,15 @@ class Insurance(models.Model):
     name = models.CharField(max_length=20)
     doctor = models.ForeignKey(Doctor)
 
-    def __unicode__(self):
+    def __str__(self):
         return "%s - %s" % (self.name,self.doctor.nationalID)
 
+
+class VisitTimeIntervalMap(models.Model):
+    patient = models.ForeignKey('patient.Patient', on_delete=models.CASCADE)
+    visitTimeInterval = models.OneToOneField(VisitTimeInterval, on_delete=models.CASCADE)
+    status = models.BooleanField(default=False)
+    checked = models.BooleanField(default=False)
 # class WorkingSchedule(models.Model):
 #     title = models.CharField(max_length=50,null=True)
 #     doctor = models.ForeignKey('doctor.models.Doctor', on_delete=models.CASCADE)

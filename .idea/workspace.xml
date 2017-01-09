@@ -2,10 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2f2aed0-ed05-47f6-b20d-ce661e78fec5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/patient/templates/patient/registerlogin.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Salamat/static/humans.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doctor/migrations/0002_auto_20161229_0623.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doctor/migrations/0003_auto_20161229_1516.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doctor/migrations/0004_auto_20161229_1532.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doctor/migrations/0005_doctor_picture.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doctor/migrations/0006_auto_20161230_2117.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doctor/migrations/0007_auto_20161230_2123.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doctor/static/doctor/css/time-table-reset.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doctor/static/doctor/css/time-table-style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/patient/migrations/0002_auto_20161229_1255.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/patient/migrations/0003_patient_picture.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/patient/migrations/0004_auto_20170102_1245.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/semantic/.versions" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/static/doctor/img/bg.jpg" afterPath="$PROJECT_DIR$/doctor/static/doctor/img/bg.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/static/doctor/img/edit.png" afterPath="$PROJECT_DIR$/doctor/static/doctor/img/edit.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/fonts/fontawesome-webfont.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/img/31.jpg" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/img/31.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/img/Screenshot from 2016-12-24 00-04-57.png" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/img/Screenshot from 2016-12-24 00-04-57.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/img/bg.jpg" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/img/bg.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/img/big-data-healthcare.jpg" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/img/big-data-healthcare.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/img/callout.jpg" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/img/callout.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/img/health-care-generic-11.jpg" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/img/health-care-generic-11.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/img/hiring-doctors.png" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/img/hiring-doctors.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/img/portfolio-1.jpg" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/img/portfolio-1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/img/portfolio-2.jpg" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/img/portfolio-2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/img/portfolio-3.jpg" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/img/portfolio-3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/img/portfolio-4.jpg" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/img/portfolio-4.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/static/patient/img/bg.jpg" afterPath="$PROJECT_DIR$/patient/static/patient/img/bg.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BBadr.eot" afterPath="$PROJECT_DIR$/static/css/fonts/BBadr.eot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BBadr.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BBadr.ttf" />
@@ -128,23 +160,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BZiba.ttf" afterPath="$PROJECT_DIR$/static/css/fonts/BZiba.ttf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fonts/BZiba.woff" afterPath="$PROJECT_DIR$/static/css/fonts/BZiba.woff" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/bullet.png" afterPath="$PROJECT_DIR$/static/img/bullet.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Salamat.iml" afterPath="$PROJECT_DIR$/.idea/Salamat.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Salamat/settings.py" afterPath="$PROJECT_DIR$/Salamat/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Salamat/urls.py" afterPath="$PROJECT_DIR$/Salamat/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Salamat/wsgi.py" afterPath="$PROJECT_DIR$/Salamat/wsgi.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/Serializers.py" afterPath="$PROJECT_DIR$/doctor/Serializers.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/__init__.py" afterPath="$PROJECT_DIR$/doctor/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/admin.py" afterPath="$PROJECT_DIR$/doctor/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/apps.py" afterPath="$PROJECT_DIR$/doctor/apps.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/forms.py" afterPath="$PROJECT_DIR$/doctor/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/doctor/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/0002_auto_20161229_0623.py" afterPath="$PROJECT_DIR$/doctor/migrations/0002_auto_20161229_0623.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/0003_auto_20161229_1516.py" afterPath="$PROJECT_DIR$/doctor/migrations/0003_auto_20161229_1516.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/0004_auto_20161229_1532.py" afterPath="$PROJECT_DIR$/doctor/migrations/0004_auto_20161229_1532.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/0005_doctor_picture.py" afterPath="$PROJECT_DIR$/doctor/migrations/0005_doctor_picture.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/0006_auto_20161230_2117.py" afterPath="$PROJECT_DIR$/doctor/migrations/0006_auto_20161230_2117.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/0007_auto_20161230_2123.py" afterPath="$PROJECT_DIR$/doctor/migrations/0007_auto_20161230_2123.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/migrations/__init__.py" afterPath="$PROJECT_DIR$/doctor/migrations/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/models.py" afterPath="$PROJECT_DIR$/doctor/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/static/doctor/css/account-style.css" afterPath="$PROJECT_DIR$/doctor/static/doctor/css/account-style.css" />
@@ -156,25 +179,75 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/templates/doctor/edit-profile-ajax.html" afterPath="$PROJECT_DIR$/doctor/templates/doctor/edit-profile-ajax.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/templates/doctor/register-login.html" afterPath="$PROJECT_DIR$/doctor/templates/doctor/register-login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/templates/doctor/search.html" afterPath="$PROJECT_DIR$/doctor/templates/doctor/search.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/templates/doctor/time-table.html" afterPath="$PROJECT_DIR$/doctor/templates/doctor/time-table.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/test/test_forms.py" afterPath="$PROJECT_DIR$/doctor/test/test_forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/test/test_models.py" afterPath="$PROJECT_DIR$/doctor/test/test_models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/test/test_views.py" afterPath="$PROJECT_DIR$/doctor/test/test_views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/tests.py" afterPath="$PROJECT_DIR$/doctor/tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/urls.py" afterPath="$PROJECT_DIR$/doctor/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doctor/views.py" afterPath="$PROJECT_DIR$/doctor/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/__init__.py" afterPath="$PROJECT_DIR$/main_Side/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/admin.py" afterPath="$PROJECT_DIR$/main_Side/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/apps.py" afterPath="$PROJECT_DIR$/main_Side/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/migrations/__init__.py" afterPath="$PROJECT_DIR$/main_Side/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/models.py" afterPath="$PROJECT_DIR$/main_Side/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/css/bootstrap.css" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/css/stylish-portfolio.css" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/css/stylish-portfolio.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/animated.less" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/animated.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/bordered-pulled.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/core.less" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/core.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/fixed-width.less" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/fixed-width.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/font-awesome.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/icons.less" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/larger.less" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/larger.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/list.less" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/mixins.less" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/path.less" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/rotated-flipped.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/stacked.less" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/stacked.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/variables.less" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_animated.scss" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_animated.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_bordered-pulled.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_core.scss" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_core.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_fixed-width.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_larger.scss" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_larger.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_list.scss" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_path.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_rotated-flipped.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_stacked.scss" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_stacked.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/font-awesome/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/js/bootstrap.js" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/static/main_Side/js/jquery.js" afterPath="$PROJECT_DIR$/main_Side/static/main_Side/js/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/templates/main_Side/LICENSE" afterPath="$PROJECT_DIR$/main_Side/templates/main_Side/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/templates/main_Side/README.md" afterPath="$PROJECT_DIR$/main_Side/templates/main_Side/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/templates/main_Side/index.html" afterPath="$PROJECT_DIR$/main_Side/templates/main_Side/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/templates/main_Side/login-direction.html" afterPath="$PROJECT_DIR$/main_Side/templates/main_Side/login-direction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/templates/main_Side/register-direction.html" afterPath="$PROJECT_DIR$/main_Side/templates/main_Side/register-direction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/tests.py" afterPath="$PROJECT_DIR$/main_Side/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/urls.py" afterPath="$PROJECT_DIR$/main_Side/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_Side/views.py" afterPath="$PROJECT_DIR$/main_Side/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/Serializers.py" afterPath="$PROJECT_DIR$/patient/Serializers.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/__init__.py" afterPath="$PROJECT_DIR$/patient/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/admin.py" afterPath="$PROJECT_DIR$/patient/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/apps.py" afterPath="$PROJECT_DIR$/patient/apps.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/forms.py" afterPath="$PROJECT_DIR$/patient/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/patient/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/migrations/0002_auto_20161229_1255.py" afterPath="$PROJECT_DIR$/patient/migrations/0002_auto_20161229_1255.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/migrations/__init__.py" afterPath="$PROJECT_DIR$/patient/migrations/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/models.py" afterPath="$PROJECT_DIR$/patient/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/static/patient/css/reg-login-animat.css" afterPath="$PROJECT_DIR$/patient/static/patient/css/reg-login-animat.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/static/patient/css/reg-login-demo.css" afterPath="$PROJECT_DIR$/patient/static/patient/css/reg-login-demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/static/patient/css/reg-login-style.css" afterPath="$PROJECT_DIR$/patient/static/patient/css/reg-login-style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/templates/patient/account.html" afterPath="$PROJECT_DIR$/patient/templates/patient/account.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/templates/patient/register-login.html" afterPath="$PROJECT_DIR$/patient/templates/patient/register-login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/test/test_forms.py" afterPath="$PROJECT_DIR$/patient/test/test_forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/test/test_models.py" afterPath="$PROJECT_DIR$/patient/test/test_models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patient/test/test_views.py" afterPath="$PROJECT_DIR$/patient/test/test_views.py" />
@@ -186,7 +259,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/jquery-ui.css" afterPath="$PROJECT_DIR$/static/css/jquery-ui.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/jquery-1.10.2.min.js" afterPath="$PROJECT_DIR$/static/js/jquery-1.10.2.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/jquery-ui.min.js" afterPath="$PROJECT_DIR$/static/js/jquery-ui.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/.versions" afterPath="$PROJECT_DIR$/static/semantic/.versions" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/LICENSE" afterPath="$PROJECT_DIR$/static/semantic/LICENSE" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/README.md" afterPath="$PROJECT_DIR$/static/semantic/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/semantic/components/colorize.js" afterPath="$PROJECT_DIR$/static/semantic/components/colorize.js" />
@@ -239,7 +311,7 @@
         <entry file="file://$PROJECT_DIR$/doctor/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="555">
-              <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
+              <caret line="44" column="55" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -294,8 +366,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -330,6 +400,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -575,8 +647,8 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="DJANGO_SETTINGS_MODULE" value="Salamat.settings" />
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Salamat.settings" />
       </envs>
       <option name="SDK_HOME" value="/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -619,14 +691,13 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="manage.py@Salamat" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25885227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26190478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.502442" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.497558" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32959184" sideWeight="0.497558" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -635,6 +706,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@Salamat" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -656,6 +728,24 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file:///Library/Python/2.6/site-packages/django/utils/lru_cache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctor/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///Library/Python/2.6/site-packages/django/utils/lru_cache.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -711,7 +801,7 @@
     <entry file="file://$PROJECT_DIR$/doctor/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
-          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
+          <caret line="44" column="55" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

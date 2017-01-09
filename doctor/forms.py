@@ -39,10 +39,35 @@ class DoctorForm(forms.ModelForm):
             'picture': forms.TextInput(attrs={'id': 'picture'}),
         }
 
+DOCTOR_DEGREE_CHOICES = (
+    ('GL', 'عمومی'),
+    ('MO', 'متخصص'),
+    ('FT', 'فوق تخصص'),
+    ('JR', 'جراح'),
+)
+DOCTOR_NAME_CHOICES = (
+    ('aa', 'داخلی و غدد'),
+    ('ab', 'عمومی'),
+    ('ac', 'اورولوژی'),
+    ('ad', 'زنان'),
+    ('ae', 'گوارش'),
+)
 
 class DoctorDegreeForm(forms.ModelForm):
-    degree = forms.CharField(max_length=2,label='مدرک')
-    degreeTitle = forms.CharField(max_length=40,label='عنوان مدرک')
+    # degree = forms.CharField(max_length=2,label='مدرک')
+    degree = forms.ChoiceField(
+        widget=forms.Select(attrs={'style': "width:442px;"}),
+        choices=DOCTOR_DEGREE_CHOICES,
+        required=True,
+        label='مدرک'
+    )
+    # degreeTitle = forms.CharField(max_length=40,label='عنوان مدرک')
+    degreeTitle = forms.ChoiceField(
+        widget=forms.Select(attrs={'style': "float:right;width:442px;"}),
+        choices=DOCTOR_NAME_CHOICES,
+        required=True,
+        label='عنوان مدرک'
+    )
     university = forms.CharField(max_length=200,label='دانشگاه')
     endOfGraduate = forms.CharField(max_length=200,label='پایان تحصیل')
 

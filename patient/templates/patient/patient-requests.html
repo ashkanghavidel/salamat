@@ -1,0 +1,61 @@
+{% load static %}
+<!doctype html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>User Profile </title>
+    {#    <meta name="author" content="Jake Rocheleau">#}
+    {#    <link rel="shortcut icon" href="http://designshack.net/favicon.ico">#}
+    {#    <link rel="icon" href="http://designshack.net/favicon.ico">#}
+    {#    <link rel="stylesheet" type="text/css" media="all" href={% static "doctor/css/account-style.css" %}>#}
+    {#    <script type="text/javascript" src={% static "js/jquery-1.10.2.min.js" %}></script>#}
+    {#    <link rel="stylesheet" href={% static "css/jquery-ui.css" %}>#}
+    {#    <script src={% static "js/jquery-ui.min.js" %}></script>#}
+    <link rel="stylesheet" type="text/css" href={% static "semantic/semantic.min.css" %}/>
+    <link rel="stylesheet" type="text/css" href={% static "css/font-face.css" %}/>
+    <script type="text/javascript" src={% static "semantic/semantic.min.js" %}></script>
+    <link rel="stylesheet" type="text/css" href={% static "doctor/css/time-table.css" %}/>
+
+</head>
+
+<body>
+<div class="ui cards">
+    {% for visit_map in visitTimeIntervalMaps %}
+        {% if visit_map.status and visit_map.checked %}
+            <div style="direction: rtl" class="ui success message">
+                <i class="close icon"></i>
+                <div class="header">
+                    شما یک نوبت تایید شده دارید
+                </div>
+                <ul class="list">
+                    <li>{{ visit_map.visitTimeInterval.dailyTimeTable.date }}</li>
+                    <li>از ساعت {{ visit_map.visitTimeInterval.startTime }}تا ساعت {{ visit_map.visitTimeInterval.endTime }}</li>
+                </ul>
+            </div>
+        {% elif  visit_map.status == False and visit_map.checked == True %}
+           <div style="direction: rtl" class="ui error message">
+                <i class="close icon"></i>
+                <div class="header">
+                    شما یک نوبت رد شده دارید
+                </div>
+                <ul class="list">
+                    <li>{{ visit_map.visitTimeInterval.dailyTimeTable.date }}</li>
+                    <li>از ساعت {{ visit_map.visitTimeInterval.startTime }}تا ساعت {{ visit_map.visitTimeInterval.endTime }}</li>
+                </ul>
+            </div>
+        {% else %}
+            <div style="direction: rtl" class="ui warning message">
+                <i class="close icon"></i>
+                <div class="header">
+                    شما یک نوبت تایید نشده دارید
+                </div>
+                <ul class="list">
+                    <li>{{ visit_map.visitTimeInterval.dailyTimeTable.date }}</li>
+                    <li>از ساعت {{ visit_map.visitTimeInterval.startTime }}تا ساعت {{ visit_map.visitTimeInterval.endTime }}</li>
+                </ul>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+</body>

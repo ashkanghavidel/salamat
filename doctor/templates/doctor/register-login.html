@@ -50,12 +50,13 @@
                 <div id="register" class="animate form">
                     <form method="post" action="" enctype="multipart/form-data">
                         <h1>ثبت نام در سامانه</h1>
+                        <h2 style="text-align:right; direction: rtl;">فایل قرارداد را از <a href="/media/media/user_contract/contract_file.docx">این جا</a> دانلود کنید.</h2>
                         {% csrf_token %}
                         {{ user_form.as_p }}
                         {{ doctor_form.as_p }}
                         {{ doctor_degree_form.as_p }}
                         <p class="signin button">
-                            <input type="submit" value="ثبت نام"/>
+                            <input type="submit" value="ثبت نام" style="position: relative; top: 20px;"/>
                         </p>
                         <p class="change_link">
                             قبلا ثبت نام کرده اید؟

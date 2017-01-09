@@ -7,4 +7,5 @@ admin.site.register(Doctor)
 admin.site.register(Insurance)
 admin.site.register(DailyTimeTable)
 admin.site.register(VisitTimeInterval)
+admin.site.register(VisitTimeIntervalMap)
 

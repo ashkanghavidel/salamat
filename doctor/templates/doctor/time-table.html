@@ -5,32 +5,92 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html">
     <title>User Profile </title>
-    <meta name="author" content="Jake Rocheleau">
-    <link rel="shortcut icon" href="http://designshack.net/favicon.ico">
-    <link rel="icon" href="http://designshack.net/favicon.ico">
-    <link rel="stylesheet" type="text/css" media="all" href={% static "doctor/css/account-style.css" %}>
-    <script type="text/javascript" src={% static "js/jquery-1.10.2.min.js" %}></script>
-    <link rel="stylesheet" href={% static "css/jquery-ui.css" %}>
-    <script src={% static "js/jquery-ui.min.js" %}></script>
+    {#    <meta name="author" content="Jake Rocheleau">#}
+    {#    <link rel="shortcut icon" href="http://designshack.net/favicon.ico">#}
+    {#    <link rel="icon" href="http://designshack.net/favicon.ico">#}
+    {#    <link rel="stylesheet" type="text/css" media="all" href={% static "doctor/css/account-style.css" %}>#}
+    {#    <script type="text/javascript" src={% static "js/jquery-1.10.2.min.js" %}></script>#}
+    {#    <link rel="stylesheet" href={% static "css/jquery-ui.css" %}>#}
+    {#    <script src={% static "js/jquery-ui.min.js" %}></script>#}
     <link rel="stylesheet" type="text/css" href={% static "semantic/semantic.min.css" %}/>
     <link rel="stylesheet" type="text/css" href={% static "css/font-face.css" %}/>
     <script type="text/javascript" src={% static "semantic/semantic.min.js" %}></script>
-
+    <link rel="stylesheet" type="text/css" href={% static "doctor/css/time-table.css" %}/>
 </head>
 
 <body>
 
+<div id="time-table">
 
-{% for key, value in visitDic.items %}
+    <table>
+        {% for key,value in visitDic.items %}
+            <tr>
+                <th>{{ key.date }}</th>
+                {% for timeInDay in value %}
+                    {% if  timeInDay.status == True %}
+                        <td style="background-color:#00AD00 " id="{{ timeInDay.id }}" class="visit-time">
+                            {% else %}
+                        <td id="{{ timeInDay.id }}" class="visit-time">
+                    {% endif %}
 
-
-    <div class="days">{{ key.date }}
-    </div>
-    <div class="times">
-        {% for timeInDay in value %}
-            <div class="boxed">{{ timeInDay.startTime }}    {{ timeInDay.endTime }}</div>
+                <form id="{{ timeInDay.id }}f" class="hidden-form">
+                    {% csrf_token %}
+                    <input type="hidden" value="{{ timeInDay.id }}" name="reserve-map">
+                </form>
+                <p class="boxed">{{ timeInDay.startTime }} {{ timeInDay.endTime }}</p>
+                </td>
+                {% endfor %}
+                </p>
+            </tr>
         {% endfor %}
+    </table>
+</div>
+<div class="ui modal">
+    <div class="header">Header</div>
+    <div class="content">
+        <p class="visit-hour"></p>
+        <p></p>
+        <p></p>
     </div>
-{% endfor %}
+</div>
+<div class="ui modal">
+    <div class="header"><p></p></div>
+    <div class="content">
+        <p></p>
+    </div>
+</div>
+<script>
+    {#    $(document).ready(function () {#}
+    {#        $('.visit-time').click(function () {#}
+    {#            $('.ui.modal .visit-hour').html($('.visit-time .boxed').html());#}
+    {#            $('.ui.modal')#}
+    {#                    .modal('show');#}
+    {#        });#}
+    {#    });#}
+    {#{% if do %}#}
+    {#data={'reserve-map':$(this).attr('id')}#}
+    $(document).ready(function () {
+        $(".visit-time").click(function () {
+            $.post("/doctor/reserve-visit-time/", $('#'.concat($(this).attr('id').concat('f'))).serialize(), function (data, status) {
+            }).fail(function (jqXHR) {
+                if (jqXHR.status == 805) {
+                    $(".ui.modal .header p").html('خطا')
+                    $('.ui.modal .content p').html('این زمان قبلا توسط شما رزرو شده است')
 
+                }
+                else if (jqXHR.status == 803) {
+                    $(".ui.modal .header p").html('خطا')
+                    $('.ui.modal .content p').html('این زمان در مرحله تایید دکتر می باشد')
+
+                }
+                else if (jqXHR.status == 804) {
+                    $(".ui.modal .header p").html('خطا')
+                    $('.ui.modal .content p').html('این زمان توسط بیمار دیگر رزرو شده است')
+                }
+                $('.ui.modal').modal('show');
+            })
+        });
+    });
+    {#{% endif %}#}
+</script>
 </body>

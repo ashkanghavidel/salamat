@@ -63,9 +63,22 @@
             <a href="/doctor/search/" onclick=$("#menu-close").click();>جستجو</a>
         </li>
         {% if user.is_authenticated %}
-            <li>
-                <a href="/doctor/account/" onclick=$("#menu-close").click();> حساب کاربری</a>
-            </li>
+            {% if not doctor %}
+                <li>
+                    <a href="/patient/account/" onclick=$("#menu-close").click();> حساب کاربری</a>
+                </li>
+                <li>
+                    <a href="/patient/logout/" onclick=$("#menu-close").click();> خروج</a>
+                </li>
+            {% endif %}
+            {% if not patient %}
+                <li>
+                    <a href="/doctor/account/" onclick=$("#menu-close").click();> حساب کاربری</a>
+                </li>
+                <li>
+                    <a href="/doctor/logout/" onclick=$("#menu-close").click();> خروج</a>
+                </li>
+            {% endif %}
         {% endif %}
     </ul>
 </nav>
@@ -74,10 +87,18 @@
 <header id="top" class="header">
     <div class="text-vertical-center">
         <div class="well well-sm greeting" style="font-size: 10px;"><h1>سامانه‌ی سلامت</h1></div>
-        <div class="well well-sm greeting">.به وبگاه همگانی سلامت خوش آمدید</div>
+
         <br>
-        <a href="../registeration_direction/" class="btn btn-dark btn-lg">ثبت نام</a>
-        <a href="../login_direction/" class="btn btn-dark btn-lg">ورود</a>
+        {% if user.is_authenticated %}
+            <div class="well well-sm greeting">.{{ doctor.user.first_name }} {{ doctor.user.last_name }}  به وبگاه همگانی
+                سلامت خوش آمدید
+            </div>
+        {% endif %}
+        {% if not user.is_authenticated %}
+            <div class="well well-sm greeting">.به وبگاه همگانی سلامت خوش آمدید</div>
+            <a href="../registeration_direction/" class="btn btn-dark btn-lg">ثبت نام</a>
+            <a href="../login_direction/" class="btn btn-dark btn-lg">ورود</a>
+        {% endif %}
     </div>
 </header>
 

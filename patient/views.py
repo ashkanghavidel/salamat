@@ -1,9 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse,HttpResponseRedirect
 from patient.forms import UserForm,PatientForm
 from patient.models import *
+from doctor.models import *
+from doctor.views import week_range
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
+
+import datetime
+from datetime import timedelta
+
 
 from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView
 from rest_framework.response import Response
@@ -68,7 +74,9 @@ def user_login(request):
         if user is not None:
             if user.is_active:
                 login(request,user)
-                return HttpResponseRedirect('/main_Side/Welcome_to_Salamat/', {'user': request.user})
+                patient = Patient.objects.get(user=request.user)
+                # return HttpResponseRedirect('/main_Side/Welcome_to_Salamat/', {'patient': request.user})
+                return render(request,'main_Side/index.html',{'patient':patient})
             else:
                 return HttpResponse('register/')
         else:
@@ -110,6 +118,19 @@ def account_edit_information(request):
         patient = Patient.objects.get(user=request.user)
         return render(request, 'doctor/account.html', {'patient': patient})
 
+
+def show_request(request,requestType):
+    weekRange = week_range(datetime.date.today())
+    today = weekRange[0]
+    nextWeek = weekRange[1]
+    visitTimeIntervalMaps = VisitTimeIntervalMap.objects.filter(patient__user=request.user,visitTimeInterval__dailyTimeTable__date__range=[today,nextWeek])
+    if requestType == 'accepted':
+        visitTimeIntervalMaps = visitTimeIntervalMaps.filter(status=True,checked=True)
+    elif requestType == 'rejected':
+        visitTimeIntervalMaps = visitTimeIntervalMaps.filter(status=False, checked=True)
+    elif requestType == 'remained':
+        visitTimeIntervalMaps = visitTimeIntervalMaps.filter(status=False, checked=False)
+    return render(request,'patient/patient-requests.html',{'visitTimeIntervalMaps':visitTimeIntervalMaps})
 
 
 
