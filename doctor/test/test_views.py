@@ -1,18 +1,8 @@
-import datetime
-import unittest
-from doctor import views
-from doctor import forms
-from doctor import models
 from doctor.views import *
-from model_mommy import mommy
 from django.test import Client
 from django.test import TestCase
-from django.test import RequestFactory
 from django.contrib.auth.models import User
-from django.core.urlresolvers import reverse
-from model_mommy.recipe import Recipe, foreign_key
 from django.contrib.auth import authenticate
-
 
 
 class TestCalls(TestCase):
@@ -20,6 +10,7 @@ class TestCalls(TestCase):
         self.user = User()
         self.user.username = 'user'
         self.user.password = 'test'
+
     def test_call_view_denies_anonymous(self):
         response = self.client.get('/doctor/login/', follow=True)
         self.assertEqual(response.status_code, 200)
@@ -37,10 +28,10 @@ class TestCalls(TestCase):
         response = self.client.post('/doctor/register', {}) # blank data dictionary
 
 
-
 class user_loginTest(TestCase):
     def setUp(self):
         self.user = User(username='salam', password='salam1', email='salam1@salam.com')
+
     def tearDown(self):
         del self.user
 
@@ -51,6 +42,7 @@ class user_loginTest(TestCase):
 
 class login_Test_Case(TestCase):
     fixtures = ['info.json']
+
     def test_post(self):
         client = Client()
         response = client.post('/doctor/login/', {'username': 'rk', 'password': 'hello1234'})
@@ -60,6 +52,7 @@ class login_Test_Case(TestCase):
 
 class search_Test(TestCase):
     fixtures = ['info.json']
+
     def test_post(self):
         c = Client()
         response = c.post('/doctor/search/', {'degree-title': 'MO', 'office-address': 'sharif', 'insurance':'faffa'})
@@ -72,9 +65,11 @@ class search_Test(TestCase):
 
 class account_Test(TestCase):
     fixtures = ['info.json']
+
     def setUp(self):
         users = User.objects.filter(username='rk')
         self.user = users[0]
+
     def tearDown(self):
         del self.user
 
@@ -86,6 +81,7 @@ class account_Test(TestCase):
         self.assertEqual(list(response.context)[0]['doctor'], doctor)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'doctor/account.html')
+
 
 class account_edit_information_Test(TestCase):
     fixtures = ['info.json']
