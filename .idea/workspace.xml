@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b2f2aed0-ed05-47f6-b20d-ce661e78fec5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <ignored path="Salamat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -587,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487829282631</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Final Release">
+      <created>1487829609087</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1487829609087</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
