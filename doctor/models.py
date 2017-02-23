@@ -2,10 +2,12 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.encoding import python_2_unicode_compatible
 
 DATE_INPUT_FORMATS = '%d-%m-%Y'
 
 
+@python_2_unicode_compatible
 class Office(models.Model):
     address = models.CharField(max_length=150)
     telephone = models.CharField(max_length=12)
@@ -20,6 +22,7 @@ DOCTOR_NAME_CHOICES = (
     ('ad', 'زنان'),
     ('ae', 'گوارش'),
 )
+
 
 class DoctorDegree(models.Model):
     university = models.CharField(max_length=200)
@@ -62,6 +65,7 @@ class DailyTimeTable(models.Model):
         return "%s - %s" % (self.date,self.doctor.nationalID)
 
 
+@python_2_unicode_compatible
 class VisitTimeInterval(models.Model):
     startTime = models.TimeField()
     endTime = models.TimeField()
@@ -72,6 +76,7 @@ class VisitTimeInterval(models.Model):
         return "%s - %s" % (self.startTime,self.endTime)
 
 
+@python_2_unicode_compatible
 class Insurance(models.Model):
     name = models.CharField(max_length=20)
     doctor = models.ForeignKey(Doctor)
