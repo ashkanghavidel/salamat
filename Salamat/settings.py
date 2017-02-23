@@ -49,6 +49,7 @@ NOSE_ARGS = [
     '--with-coverage',
     '--cover-package=doctor,patient',
 ]
+
 PROJECT_APPS = [
     'doctor',
     'patient',
