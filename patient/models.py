@@ -10,6 +10,6 @@ class Patient(models.Model):
     phoneNumber = models.CharField(max_length=200)
     # picture = models.ImageField(upload_to='media/user_picture')
 
-    def __str__(self):
+    def __unicode__(self):
         return self.user.username
 
