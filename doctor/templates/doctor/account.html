@@ -11,20 +11,29 @@
     <link rel="stylesheet" type="text/css" media="all" href={% static "doctor/css/account-style.css" %}>
     <script type="text/javascript" src={% static "js/jquery-1.10.2.min.js" %}></script>
     <link rel="stylesheet" href={% static "css/jquery-ui.css" %}>
+    <script src={% static "js/jquery-3.1.1.js" %}></script>
     <script src={% static "js/jquery-ui.min.js" %}></script>
-    <script src={% static "js/jquery-3.0.0.min.js" %}></script>
-    <link rel="stylesheet" type="text/css" href={% static "semantic/semantic.min.css" %}/>
     <link rel="stylesheet" type="text/css" href={% static "css/font-face.css" %}/>
+    <link rel="stylesheet" type="text/css" href={% static "semantic/semantic.min.css" %}/>
     <script type="text/javascript" src={% static "semantic/semantic.min.js" %}></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href={% static "doctor/css/time-table.css" %}/>
     <link rel="stylesheet" href={% static "css/jquery-ui.css" %}>
-    <script src={% static "js/jquery-1.10.2.min.js" %}></script>
-    <script src={% static "js/jquery-ui.min.js" %}></script>
+    <link rel="stylesheet" type="text/css" href={% static "patient/css/common.css" %}/>
 </head>
 
 <body>
+<header style="display:table;width: 100%; ">
+    <div id="user-info" style="display:table-cell;vertical-align:middle;">
 
+    </div>
+    <div id="header-logo">
+        <a href="../../main_Side/Welcome_to_Salamat/"><img src='{% static "patient/img/518622_861.jpg" %}' style="height: 50px; width:50px; margin-top: 10px; margin-bottom: 10px; margin-right: -60px;"/></a>
+        <span style="position: relative; right: 40px; top: 10px;">
+                وبگاه سلامت
+        </span>
+    </div>
+    <div style="clear: both"></div>
+</header>
 <div id="w">
     <div id="content" class="clearfix">
         <div id="userphoto"><img src="{{ doctor.picture.url }}" alt="default avatar"></div>
@@ -35,6 +44,8 @@
                 <li><a href="#bio" clas>زمانبندی</a></li>
                 <li><a id="toactivity" href="#activity">برنامه هفتگی</a></li>
                 <li><a id="topending" href="#pending">پیام ها</a></li>
+                <li><a id="to-accepted-visit" href="#accepted-visit">وضعیت ملاقات ها</a></li>
+                <li><a id="to-paid-visit" href="#paid-visit">صورتحساب مالی</a></li>
                 <li><a href="#complementary">اطلاعات تکمیلی</a></li>
                 <li><a id="tosetting" href="#settings">تنظیمات</a></li>
 
@@ -62,6 +73,12 @@
         </section>
 
         <section id="pending" class="hidden">
+        </section>
+
+        <section id="accepted-visit" class="hidden">
+        </section>
+
+        <section id="paid-visit" class="hidden">
         </section>
 
         <section id="complementary" class="hidden">
@@ -92,7 +109,7 @@
         </section>
 
         <section id="settings" class="hidden" style="text-align: right">
-            <p>Edit your user settings:</p>
+            <p>اطلاعات خود را ویرایش نمایید:</p>
             <form method="post" action="edit-information/">
                 {% csrf_token %}
                 <p class="setting">نام<span><input readonly value="{{ user.first_name }}"><img
@@ -118,10 +135,6 @@
                     Save
                 </button>
             </form>
-
-
-            {#            <p class="setting"> None<span>Connected Accounts <img#}
-            {#                    src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>#}
         </section>
     </div><!-- @end #content -->
 </div><!-- @end #w -->
@@ -146,8 +159,11 @@
 </script>
 <script>
     $(document).ready(function () {
+        $("#datepicker").datepicker();
+    });
+    $(document).ready(function () {
         $("#toactivity").click(function () {
-            $.get("time-table/", function (data, status) {
+            $.get("time-table/this", function (data, status) {
                 $("#activity").html(data);
             });
         });
@@ -159,11 +175,71 @@
             });
         });
     });
-</script>
-<script>
     $(document).ready(function () {
-        $("#datepicker").datepicker();
+        $("#to-accepted-visit").click(function () {
+            $.get("show-accepted-visit/", function (data, status) {
+                $("#accepted-visit").html(data);
+            });
+        });
     });
+    $(document).ready(function () {
+        $("#to-paid-visit").click(function () {
+            $.get("show-paid-visit/", function (data, status) {
+                $("#paid-visit").html(data);
+            });
+        });
+    });
+
+
 </script>
+<footer style="height: 180px;">
+    <div id="footer-header" class="bottom">
+        <div id="footer-logo">
+            <img src='{% static "patient/img/518622_861.jpg" %}' style="position:relative; top: -10px;height: 75px; width:75px;
+            right: -15px;"/>
+            <span>
+                وبگاه سلامت
+            </span>
+        </div>
+        <div id="footer-programmers-url">
+            <img src='{% static "patient/img/download.jpg" %}' style="position:relative; height: 75px; width:75px;
+            right: 10px;">
+        </div>
+    </div>
+    <div id="footer-links">
+        <ul>
+            <li><a class="btn-link">
+                تماس با ما
+            </a></li>
+            <li>
+                درباره ما
+            </li>
+            <li>
+                همکاری
+            </li>
+            <li>
+                چگونه از دکترمان زمان بگیریم؟
+            </li>
+            <li>
+                اعتماد و امنیت
+            </li>
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer-copy-right">
+        تمامی حقوق مادی و معنوی این سامانه به نام شرکت مهندسین براداران قوی دل-خزعلی-رهبری محفوظ است.
+    </div>
+    <div id="footer-rules">
+        <span>
+            قوانین
+        </span>
+        <span>|</span>
+        <span id="footer-privacy">
+            حریم شخصی
+        </span>
+
+    </div>
+</footer>
+
 </body>
 </html>

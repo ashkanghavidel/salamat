@@ -9,35 +9,73 @@
     <link rel="shortcut icon" href="http://designshack.net/favicon.ico">
     <link rel="icon" href="http://designshack.net/favicon.ico">
     <link rel="stylesheet" type="text/css" media="all" href={% static "doctor/css/account-style.css" %}>
-    <script type="text/javascript" src={% static "js/jquery-1.10.2.min.js" %}></script>
-    <link rel="stylesheet" href={% static "css/jquery-ui.css" %}>
-    <script src={% static "js/jquery-ui.min.js" %}></script>
-    <script src={% static "js/jquery-3.0.0.min.js" %}></script>
-    <link rel="stylesheet" type="text/css" href={% static "semantic/semantic.min.css" %}/>
     <link rel="stylesheet" type="text/css" href={% static "css/font-face.css" %}/>
-    <script type="text/javascript" src={% static "semantic/semantic.min.js" %}></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href={% static "doctor/css/time-table.css" %}/>
     <link rel="stylesheet" href={% static "css/jquery-ui.css" %}>
-    <script src={% static "js/jquery-1.10.2.min.js" %}></script>
+    <script src={% static "js/jquery-3.1.1.js" %}></script>
     <script src={% static "js/jquery-ui.min.js" %}></script>
+    <link rel="stylesheet" type="text/css" href={% static "semantic/semantic.min.css" %}/>
+    <script type="text/javascript" src={% static "semantic/semantic.min.js" %}></script>
+    <link rel="stylesheet" type="text/css" href={% static "patient/css/common.css" %}/>
 </head>
 
 <body>
+<header style="display:table;width: 100%; ">
+    <div id="user-info" style="display:table-cell;vertical-align:middle;">
 
+    </div>
+    <div id="header-logo">
+        <a href="../../main_Side/Welcome_to_Salamat/"><img src='{% static "patient/img/518622_861.jpg" %}'
+                                                           style="height: 50px; width:50px; margin-top: 10px; margin-bottom: 10px; margin-right: -60px;"/></a>
+        <span style="position: relative; right: 40px; top: 10px;">
+                وبگاه سلامت
+        </span>
+    </div>
+    <div style="clear: both"></div>
+</header>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.ui.huge.star.rating')
+                .rating('disable');
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#toactivity").click(function () {
+            $.get("/doctor/time-table/{{ doctor.user.username }}", function (data, status) {
+                $("#activity").html(data);
+            });
+        });
+    });
+    $(document).ready(function () {
+        $("#to-patient-comments").click(function () {
+            $.get("/doctor/patients-comments/{{ doctor.user.username }}", function (data, status) {
+                $("#patient-comments").html(data);
+            });
+        });
+    });
+</script>
 <div id="w">
     <div id="content" class="clearfix">
         <div id="userphoto"><img src="{{ doctor.picture.url }}" alt="default avatar"></div>
-        <h2 style="direction:rtl;font-family: 'X Dorosht'"> دکتر {{ user.first_name }} {{ user.last_name }}  </h2>
-
+        <h2 style="direction:rtl;font-family: 'X Dorosht'"> دکتر {{ user.first_name }} {{ user.last_name }}
+        </h2>
+        <div class="ui huge star rating" data-rating="{{ patient_rate.totalRate }}" data-max-rating="10"
+             style="margin: 10px 25% 10px 25%"><p>امتیاز این
+            دکتر</p></div>
         <nav id="profiletabs">
             <ul class="clearfix">
                 <li><a id="toactivity" href="#activity">برنامه هفتگی دکتر</a></li>
                 <li><a id="tosetting" href="#settings">درباره دکتر</a></li>
+                <li><a id="to-patient-comments" href="#patient-comments">نظرات</a></li>
             </ul>
         </nav>
 
         <section id="activity" class="hidden">
+        </section>
+
+        <section id="patient-comments" class="hidden">
         </section>
 
         <section id="settings" class="hidden" style="text-align: right">
@@ -47,11 +85,13 @@
             <p class="setting">نام خانوادگی<span><input readonly value="{{ doctor.user.last_name }}"><img
                     src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>
 
-            <p class="setting">پست الکترونیکی<span><input readonly name="email" value="{{ doctor.user.email }}"></span></p>
-            {#                <div id="edit-ajax">{% include 'doctor/edit-profile-ajax.html' %}</div>#}
-            <p class="setting">تخصص<span><input readonly name="degreeTitle" value="{{ doctor.doctorDegree.degreeTitle }}"></span></p>
+            <p class="setting">پست الکترونیکی<span><input readonly name="email" value="{{ doctor.user.email }}"></span>
+            </p>
+            <p class="setting">تخصص<span><input readonly name="degreeTitle"
+                                                value="{{ doctor.doctorDegree.degreeTitle }}"></span></p>
 
-            <p class="setting">دانشگاه محل تحصیل<span><input readonly name="university" value="{{ doctor.doctorDegree.university }}"></span></p>
+            <p class="setting">دانشگاه محل تحصیل<span><input readonly name="university"
+                                                             value="{{ doctor.doctorDegree.university }}"></span></p>
 
             <p class="setting">مدت زمان ملاقات<span><input readonly name="visitDuration"
                                                            value="{{ doctor.visitDuration }}"></span></p>
@@ -77,30 +117,60 @@
         });
     });
 </script>
-{#<script>#}
-{#    $(document).ready(function () {#}
-{#        $("#tosetting").click(function () {#}
-{#            $.get("edit-information/", function (data, status) {#}
-{#                $("#edit-ajax").html(data);#}
-{#            });#}
-{#        });#}
-{#    });#}
-{#</script>#}
 <script>
     $(document).ready(function () {
         $("#datepicker").datepicker();
     });
 </script>
-<script>
-    $(document).ready(function () {
-        $("#toactivity").click(function () {
-            $.get("/doctor/time-table/{{ doctor.user.username }}", function (data, status) {
-                $("#activity").html(data);
-            });
-        });
-    });
-</script>
 
 
+<footer style="height: 180px;">
+    <div id="footer-header" class="bottom">
+        <div id="footer-logo">
+            <img src='{% static "patient/img/518622_861.jpg" %}' style="position:relative; top: -10px;height: 75px; width:75px;
+            right: -15px;"/>
+            <span>
+                وبگاه سلامت
+            </span>
+        </div>
+        <div id="footer-programmers-url">
+            <img src='{% static "patient/img/download.jpg" %}' style="position:relative; height: 75px; width:75px;
+            right: 10px;">
+        </div>
+    </div>
+    <div id="footer-links">
+        <ul>
+            <li><a class="btn-link">
+                تماس با ما
+            </a></li>
+            <li>
+                درباره ما
+            </li>
+            <li>
+                همکاری
+            </li>
+            <li>
+                چگونه از دکترمان زمان بگیریم؟
+            </li>
+            <li>
+                اعتماد و امنیت
+            </li>
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer-copy-right">
+        تمامی حقوق مادی و معنوی این سامانه به نام شرکت مهندسین براداران قوی دل-خزعلی-رهبری محفوظ است.
+    </div>
+    <div id="footer-rules">
+        <span>
+            قوانین
+        </span>
+        <span>|</span>
+        <span id="footer-privacy">
+            حریم شخصی
+        </span>
+
+    </div>
+</footer>
 </body>
 </html>

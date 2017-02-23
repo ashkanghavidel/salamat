@@ -63,20 +63,20 @@
             <a href="/doctor/search/" onclick=$("#menu-close").click();>جستجو</a>
         </li>
         {% if user.is_authenticated %}
-            {% if not doctor %}
-                <li>
-                    <a href="/patient/account/" onclick=$("#menu-close").click();> حساب کاربری</a>
-                </li>
-                <li>
-                    <a href="/patient/logout/" onclick=$("#menu-close").click();> خروج</a>
-                </li>
-            {% endif %}
-            {% if not patient %}
+            {% if doctor %}
                 <li>
                     <a href="/doctor/account/" onclick=$("#menu-close").click();> حساب کاربری</a>
                 </li>
                 <li>
                     <a href="/doctor/logout/" onclick=$("#menu-close").click();> خروج</a>
+                </li>
+            {% endif %}
+            {% if patient %}
+                <li>
+                    <a href="/patient/account/" onclick=$("#menu-close").click();> حساب کاربری</a>
+                </li>
+                <li>
+                    <a href="/patient/logout/" onclick=$("#menu-close").click();> خروج</a>
                 </li>
             {% endif %}
         {% endif %}
@@ -90,8 +90,14 @@
 
         <br>
         {% if user.is_authenticated %}
+            {% if doctor %}
             <div class="well well-sm greeting">.{{ doctor.user.first_name }} {{ doctor.user.last_name }}  به وبگاه همگانی
                 سلامت خوش آمدید
+            {% elif patient %}
+                            <div class="well well-sm greeting">.{{ patient.user.first_name }} {{ patient.user.last_name }}  به وبگاه همگانی
+                سلامت خوش آمدید
+
+            {% endif %}
             </div>
         {% endif %}
         {% if not user.is_authenticated %}

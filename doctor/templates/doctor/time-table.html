@@ -1,30 +1,13 @@
 {% load static %}
-<!doctype html>
-<html lang="en-US" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html">
-    <title>User Profile </title>
-    {#    <meta name="author" content="Jake Rocheleau">#}
-    {#    <link rel="shortcut icon" href="http://designshack.net/favicon.ico">#}
-    {#    <link rel="icon" href="http://designshack.net/favicon.ico">#}
-    {#    <link rel="stylesheet" type="text/css" media="all" href={% static "doctor/css/account-style.css" %}>#}
-    {#    <script type="text/javascript" src={% static "js/jquery-1.10.2.min.js" %}></script>#}
-    {#    <link rel="stylesheet" href={% static "css/jquery-ui.css" %}>#}
-    {#    <script src={% static "js/jquery-ui.min.js" %}></script>#}
-    <link rel="stylesheet" type="text/css" href={% static "semantic/semantic.min.css" %}/>
-    <link rel="stylesheet" type="text/css" href={% static "css/font-face.css" %}/>
-    <script type="text/javascript" src={% static "semantic/semantic.min.js" %}></script>
-    <link rel="stylesheet" type="text/css" href={% static "doctor/css/time-table.css" %}/>
-</head>
-
-<body>
 
 <div id="time-table">
-
-    <table>
+    <button style="border-radius:70%;height: 50px;width:50px;float: left;display: inline" id="previous-week-button"
+            value="{{ previous_week_first_day }}"><img style="border-radius:70%"
+                                                       src="{% static "doctor/img/previous.png" %}"></button>
+    <table style="float: left;display: inline">
         {% for key,value in visitDic.items %}
             <tr>
+
                 <th>{{ key.date }}</th>
                 {% for timeInDay in value %}
                     {% if  timeInDay.status == True %}
@@ -37,13 +20,18 @@
                     {% csrf_token %}
                     <input type="hidden" value="{{ timeInDay.id }}" name="reserve-map">
                 </form>
-                <p class="boxed">{{ timeInDay.startTime }} {{ timeInDay.endTime }}</p>
+                <p class="boxed">
+                    <button class="visit-time">{{ timeInDay.startTime }} {{ timeInDay.endTime }}</button>
+                </p>
                 </td>
                 {% endfor %}
                 </p>
             </tr>
         {% endfor %}
     </table>
+    <button style="border-radius:70%;height: 50px;width:50px;float: left;display: inline" id="next-week-button"
+            value="{{ next_week_first_day }}"><img style="border-radius:70%" src={% static "doctor/img/next.png" %}>
+    </button>
 </div>
 <div class="ui modal">
     <div class="header">Header</div>
@@ -59,16 +47,26 @@
         <p></p>
     </div>
 </div>
+{#    {{ previous_week_first_day|date:"Y-m-d" }}#}
 <script>
-    {#    $(document).ready(function () {#}
-    {#        $('.visit-time').click(function () {#}
-    {#            $('.ui.modal .visit-hour').html($('.visit-time .boxed').html());#}
-    {#            $('.ui.modal')#}
-    {#                    .modal('show');#}
-    {#        });#}
-    {#    });#}
-    {#{% if do %}#}
-    {#data={'reserve-map':$(this).attr('id')}#}
+    $(document).ready(function () {
+        $('#previous-week-button').click(function () {
+            $.get("/doctor/time-table/{{ doctor_user_name }}/{{ previous_week_first_day|date:"Y-b-d" }}", function (data, status) {
+                var success = $(data).filter("#time-table");
+                var script_field = $(data).filter("script");
+                $("#time-table").replaceWith(success);
+                $("script").replaceWith(script_field);
+            });
+        });
+        $('#next-week-button').click(function () {
+            $.get("/doctor/time-table/{{ doctor_user_name }}/{{ next_week_first_day|date:"Y-b-d" }}", function (data, status) {
+                var success = $(data).filter("#time-table");
+                var script_field = $(data).filter("script");
+                $("#time-table").replaceWith(success);
+                $("script").replaceWith(script_field);
+            });
+        });
+    });
     $(document).ready(function () {
         $(".visit-time").click(function () {
             $.post("/doctor/reserve-visit-time/", $('#'.concat($(this).attr('id').concat('f'))).serialize(), function (data, status) {
@@ -91,6 +89,4 @@
             })
         });
     });
-    {#{% endif %}#}
 </script>
-</body>

@@ -5,25 +5,34 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html">
     <title>User Profile </title>
-    <meta name="author" content="Jake Rocheleau">
+    <meta name="author" content="HassanRAH">
     <link rel="shortcut icon" href="http://designshack.net/favicon.ico">
     <link rel="icon" href="http://designshack.net/favicon.ico">
     <link rel="stylesheet" type="text/css" media="all" href={% static "doctor/css/account-style.css" %}>
-    <script type="text/javascript" src={% static "js/jquery-1.10.2.min.js" %}></script>
     <link rel="stylesheet" href={% static "css/jquery-ui.css" %}>
+    <script src={% static "js/jquery-3.1.1.js" %}></script>
     <script src={% static "js/jquery-ui.min.js" %}></script>
-    <script src={% static "js/jquery-3.0.0.min.js" %}></script>
     <link rel="stylesheet" type="text/css" href={% static "semantic/semantic.min.css" %}/>
-    <link rel="stylesheet" type="text/css" href={% static "css/font-face.css" %}/>
     <script type="text/javascript" src={% static "semantic/semantic.min.js" %}></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href={% static "css/font-face.css" %}/>
+    <link rel="stylesheet" type="text/css" href={% static "patient/css/common.css" %}/>
 </head>
 
 <body>
+<header style="display:table;width: 100%; ">
+    <div id="user-info" style="display:table-cell;vertical-align:middle;">
 
+    </div>
+    <div id="header-logo">
+        <a href="../../main_Side/Welcome_to_Salamat/"><img src='{% static "patient/img/518622_861.jpg" %}' style="height: 50px; width:50px; margin-top: 10px; margin-bottom: 10px; margin-right: -60px;"/></a>
+        <span style="position: relative; right: 40px; top: 10px;">
+                وبگاه سلامت
+        </span>
+    </div>
+    <div style="clear: both"></div>
+</header>
 <div id="w">
     <div id="content" class="clearfix">
-{#        <div id="userphoto"><img src="{{ patient.picture.url }}" alt="default avatar"></div>#}
         <h2 style="direction:rtl;font-family: 'X Dorosht'"> مراجع محترم {{ user.first_name }} {{ user.last_name }}  </h2>
 
         <nav id="profiletabs">
@@ -32,6 +41,7 @@
                 <li><a id="toremain-request" href="#remain-request">درخواست های بررسی نشده</a></li>
                 <li><a id="toaccepted-request" href="#accepted-request">درخواست های تایید شده</a></li>
                 <li><a id="torejected-request" href="#rejected-request">درخواست های رد شده</a></li>
+                <li><a id="topayment-status" href="#payment-status">وضعیت پرداختی ها</a></li>
                 <li><a id="tosetting" href="#settings">تنظیمات</a></li>
             </ul>
         </nav>
@@ -45,8 +55,11 @@
         <section id="rejected-request" class="hidden">
         </section>
 
+        <section id="payment-status" class="hidden">
+        </section>
+
         <section id="settings" class="hidden" style="text-align: right">
-            <p>Edit your user settings:</p>
+            <p>اطلاعات خود را ویرایش نمایید:</p>
             <form method="post" action="edit-information/">
                 {% csrf_token %}
                 <p class="setting">نام<span><input readonly value="{{ user.first_name }}"><img
@@ -70,8 +83,6 @@
             </form>
 
 
-            {#            <p class="setting"> None<span>Connected Accounts <img#}
-            {#                    src={% static "doctor/img/edit.png" %} alt="*Edit*"></span></p>#}
         </section>
     </div><!-- @end #content -->
 </div><!-- @end #w -->
@@ -120,10 +131,66 @@
         });
     });
     $(document).ready(function () {
+        $("#topayment-status").click(function () {
+            $.get("show-payment-status/", function (data, status) {
+                $("#payment-status").html(data);
+            });
+        });
+    });
+    $(document).ready(function () {
         $("#tosearch").click(function () {
             window.location.replace("/doctor/search/");
         });
     });
 </script>
+<footer style="height: 180px;">
+    <div id="footer-header" class="bottom">
+        <div id="footer-logo">
+            <img src='{% static "patient/img/518622_861.jpg" %}' style="position:relative; top: -10px;height: 75px; width:75px;
+            right: -15px;"/>
+            <span>
+                وبگاه سلامت
+            </span>
+        </div>
+        <div id="footer-programmers-url">
+            <img src='{% static "patient/img/download.jpg" %}' style="position:relative; height: 75px; width:75px;
+            right: 10px;">
+        </div>
+    </div>
+    <div id="footer-links">
+        <ul>
+            <li><a class="btn-link">
+                تماس با ما
+            </a></li>
+            <li>
+                درباره ما
+            </li>
+            <li>
+                همکاری
+            </li>
+            <li>
+                چگونه از دکترمان زمان بگیریم؟
+            </li>
+            <li>
+                اعتماد و امنیت
+            </li>
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+    <div id="footer-copy-right">
+        تمامی حقوق مادی و معنوی این سامانه به نام شرکت مهندسین براداران قوی دل-خزعلی-رهبری محفوظ است.
+    </div>
+    <div id="footer-rules">
+        <span>
+            قوانین
+        </span>
+        <span>|</span>
+        <span id="footer-privacy">
+            حریم شخصی
+        </span>
+
+    </div>
+</footer>
+
 </body>
 </html>

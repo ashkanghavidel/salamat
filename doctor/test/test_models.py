@@ -1,95 +1,95 @@
 import datetime
-from django.test import TestCase
 from doctor.models import *
-from django.contrib.auth.models import User
-from django.utils import timezone
-
+from django.test import TestCase
 
 
 
 class DoctorTestCase(TestCase):
-    def setUp(self):
-        doctorDegree = DoctorDegree.objects.create(university='tehran2',endOfGraduate='1395',degree='GL',degreeTitle='beauty1')
-        user = User.objects.create_user('john3', 'lennon@thebeatles.com', 'johnpassword', id=4)
-        user.save()
-        doctor = Doctor(user=user,doctorDegree=doctorDegree,id=3)
-        doctor.save()
-        return doctor
-
+    fixtures = ['info.json']
     def test_national_uniqueness(self):
-        first = self.setUp()
-        self.assertTrue(isinstance(first, Doctor))
-        second = Doctor.objects.get(user=User.objects.get(username='john3'))
-        self.assertEqual(first.doctorDegree.degree, second.doctorDegree.degree)
+        mydoctor = Doctor.objects.filter(pk=1).first()
+        self.assertEqual(mydoctor.nationalID, "1234")
+        self.assertTrue(isinstance(mydoctor, Doctor))
+
 
 class DoctorDegreeTestCase(TestCase):
-    def setUp(self):
-        return DoctorDegree.objects.create(university='tehran',endOfGraduate='1394',degree='GL',degreeTitle='beauty')
-
+    fixtures = ['info.json']
     def test_national_uniqueness(self):
-        first = self.setUp()
-        self.assertTrue(isinstance(first, DoctorDegree))
-        second = DoctorDegree.objects.filter(degree='GL')
-        # self.assertEqual(len(DoctorDegree.objects.filter(degree='GL')), 1)
-        self.assertEqual(second[0].university,first.university)
+        mydoctordegree = DoctorDegree.objects.filter(pk=1).first()
+        self.assertEqual(mydoctordegree.university, "sharif")
+        self.assertTrue(isinstance(mydoctordegree, DoctorDegree))
+
+    def field_test(self):
+        mydoctordegree = DoctorDegree.objects.get(id=1)
+        field_label = mydoctordegree._meta.get_field(
+            'university').verbose_name  # Get the metadata for the required field and use it to query the required field data
+        self.assertEquals(field_label, 'university')  # Compare the value to the expected result
 
 
 class OfficeTestCase(TestCase):
-    def setUp(self):
-        return Office.objects.create(address="No 33, Allame Jonubi",telephone='09128307749')
-
+    fixtures = ['info.json']
     def test_national_uniqueness(self):
-        first = self.setUp()
-        self.assertTrue(isinstance(first, Office))
-        second = Office.objects.filter(address="No 33, Allame Jonubi",telephone='09128307749')
-        self.assertEqual(first.__unicode__(), second[0].__unicode__())
+        myoffice = Office.objects.filter(pk=3).first()
+        self.assertEqual(myoffice.address, "sadeghie")
+        self.assertTrue(isinstance(myoffice, Office))
+
+    def field_test(self):
+        myoffice = Office.objects.get(id=1)
+        field_label = myoffice._meta.get_field(
+            'address').verbose_name  # Get the metadata for the required field and use it to query the required field data
+        self.assertEquals(field_label, 'address')  # Compare the value to the expected result
 
 class VisitTimeIntervalTestCase(TestCase):
-    now = None
-    end = None
-    dailyTimeTable = None
-    def setUp(self):
-        doctorDegree = DoctorDegree.objects.create(university='tehran2', endOfGraduate='1395', degree='GL',
-                                                   degreeTitle='beauty1')
-        user = User.objects.create_user('john3', 'lennon@thebeatles.com', 'johnpassword', id=6)
-        user.save()
-        doctor = Doctor(user=user, doctorDegree=doctorDegree, id=6)
-        doctor.save()
-        dailyTimeTable = DailyTimeTable(doctor = doctor, date=datetime.date.today())
-        dailyTimeTable.save()
-        now = timezone.now()
-        end = timezone.now()
-        mylist = []
-        mylist.append(now)
-        mylist.append(end)
-        mylist.append(VisitTimeInterval.objects.create(startTime= now, endTime= end, dailyTimeTable = dailyTimeTable))
-        mylist.append(dailyTimeTable)
-        return mylist
-
+    fixtures = ['info.json']
     def test_national_uniqueness(self):
-        firstlist = self.setUp()
-        self.assertTrue(isinstance(firstlist[2], VisitTimeInterval))
-        second = VisitTimeInterval.objects.get(startTime=firstlist[0], endTime=firstlist[1], dailyTimeTable = firstlist[3])
-        self.assertEqual(firstlist[2].__unicode__, second.__unicode__)
+        myvisittimeinterval = VisitTimeInterval.objects.filter(pk=1).first()
+        self.assertEqual(myvisittimeinterval.startTime, datetime.time(0,0))
+        self.assertEqual(myvisittimeinterval.endTime, datetime.time(7,12,2))
+        self.assertTrue(isinstance(myvisittimeinterval, VisitTimeInterval))
+
+    def field_test(self):
+        myvisittimeinterval = VisitTimeInterval.objects.get(id=1)
+        field_label = myvisittimeinterval._meta.get_field(
+            'startTime').verbose_name  # Get the metadata for the required field and use it to query the required field data
+        self.assertEquals(field_label, 'startTime')  # Compare the value to the expected result
+
+class VisitTimeIntervalMapTestCase(TestCase):
+    fixtures = ['info.json']
+    def test_national_uniqueness(self):
+        myvisittimeintervalmap = VisitTimeIntervalMap.objects.filter(pk=1).first()
+        self.assertEqual(myvisittimeintervalmap.doctor.user.username, 'rk')
+        self.assertEqual(myvisittimeintervalmap.doctor.user.first_name, 'mohsen')
+        self.assertTrue(isinstance(myvisittimeintervalmap, VisitTimeIntervalMap))
+
+    def field_test(self):
+        myvisittimeintervalmap = VisitTimeIntervalMap.objects.get(id=1)
+        field_label = myvisittimeintervalmap._meta.get_field(
+            'checked').verbose_name  # Get the metadata for the required field and use it to query the required field data
+        self.assertEquals(field_label, 'checked')  # Compare the value to the expected result
+
+class VisitPaymentTestCase(TestCase):
+    fixtures = ['info.json']
+    def test_national_uniqueness(self):
+        myvisitpayment = VisitPayment.objects.filter(pk=1).first()
+        self.assertEqual(myvisitpayment.cashAmount, 12342314.0)
+        self.assertEqual(myvisitpayment.status, True)
+        self.assertTrue(isinstance(myvisitpayment, VisitPayment))
+
+    def field_test(self):
+        myvisitpayment = VisitPayment.objects.get(id=1)
+        field_label = myvisitpayment._meta.get_field(
+            'cashAmount').verbose_name  # Get the metadata for the required field and use it to query the required field data
+        self.assertEquals(field_label, 'cashAmount')  # Compare the value to the expected result
 
 class InsuranceTestCase(TestCase):
-    def setUp(self):
-        user = User.objects.create_user('john3', 'lennon@thebeatles.com', 'johnpassword', id=5)
-        user.save()
-        doctorDegree = DoctorDegree.objects.create(university='tehran2', endOfGraduate='1395', degree='GL',
-                                                   degreeTitle='beauty1')
-        doctor = Doctor(user = user, doctorDegree=doctorDegree, id=7)
-        doctor.save()
-        mylist = []
-        mylist.append(doctor)
-        mylist.append(Insurance.objects.create(name='social1', doctor=doctor))
-        return mylist
-
+    fixtures = ['info.json']
     def test_national_uniqueness(self):
-        firstlist = self.setUp()
-        print(self.assertTrue(isinstance(firstlist[1], Insurance)))
-        second = Insurance.objects.filter(name='social1').filter(doctor=firstlist[0])
-        self.assertEqual(firstlist[1].__unicode__, second[1].__unicode__)
+        myinsurance = Insurance.objects.filter(pk=3).first()
+        self.assertEqual(myinsurance.name, 'bime_alavi')
+        self.assertTrue(isinstance(myinsurance, Insurance))
 
-
-
+    def field_test(self):
+        myinsurance = Insurance.objects.get(id=1)
+        field_label = myinsurance._meta.get_field(
+            'name').verbose_name  # Get the metadata for the required field and use it to query the required field data
+        self.assertEquals(field_label, 'name')  # Compare the value to the expected result

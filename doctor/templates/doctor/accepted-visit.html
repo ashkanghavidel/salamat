@@ -1,0 +1,43 @@
+{% load static %}
+
+<div class="ui cards">
+    {% for visit_map in visit_time_interval_maps %}
+        <div class="card">
+            <div class="content">
+                <div class="header">
+                    {{ visit_map.patient.user.username }}
+                </div>
+                <div class="meta">
+                    {{ visit_map.visitTimeInterval.dailyTimeTable.date }}
+                </div>
+                <div class="description">
+                    <p>
+                        یک ملاقات از شما برای این زمان درخواست داده شده است.{{ visit_map.visitTimeInterval.startTime }}
+                        - {{ visit_map.visitTimeInterval.endTime }}
+                    </p>
+                    <p>{{ visit_map.is }}</p>
+                </div>
+            </div>
+            <div class="extra content">
+                <form method="post" id="{{ visit_map.id }}f" class="response-form">
+                        {% csrf_token %}
+                        <input type="hidden" value="{{ visit_map.id }}" name="visit-map-id">
+                        <input type="number" value="0" name="cash-amount">
+                    </form>
+                <div class="ui two buttons">
+                    <div id="{{ visit_map.id }}" class="ui basic green button">ملاقات انجام شد</div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".ui.basic.green.button").click(function () {
+            $.post("job-status/done", $('#'.concat($(this).attr('id').concat('f'))).serialize(), function (data, status) {
+                {#                alert($(this).attr(id));#}
+            });
+        });
+    });
+</script>

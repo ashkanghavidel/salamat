@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href={% static "semantic/semantic.min.css" %}/>
-    <link rel="stylesheet" type="text/css" href={% static "css/font-face.css" %}/>
     <script type="text/javascript" src={% static "semantic/semantic.min.js" %}></script>
+
+    <link rel="stylesheet" type="text/css" href={% static "css/font-face.css" %}/>
     <style>
         body {
             font-family: 'BYek';
@@ -29,16 +30,16 @@
                 </div>
                 <ul class="list">
                     <li>{{ doctor.doctorDegree.degreeTitle }}</li>
-                    <li>{{ doctor.doctorDegree.degree }}</li>
+                    <li>{{ doctor.doctorDegree.degree}}</li>
                 </ul>
             </div>
         {% endfor %}
     </div>
 {% else %}
     <div style="position: relative;margin: 50px 20% 25px 20%">
+        <h1 style="font-family: 'XB Shafigh';position: relative;text-align: center">پزشک خود را جستجو کنید...</h1>
         <form class="ui form" action="" method="post">
             {% csrf_token %}
-            <h1 style="font-family: 'XB Titre';position: relative;text-align: center">پزشک خود را جستجو کنید...</h1>
             <div class="field">
                 <label>تخصص پزشک</label>
                 <input id="expertise" type="text" name="degree-title" placeholder="غدد داخلی">
@@ -47,15 +48,11 @@
                 <label>محل مطب</label>
                 <input id="office-address" type="text" name="office-address" placeholder="تهران">
             </div>
-{#            <div class="field">#}
-{#                <label>ساعات پذیرش</label>#}
-{#                <input id="time" type="text" name="time" placeholder="۱۴ الی ۱۶">#}
-{#            </div>#}
             <div class="field">
                 <label>بیمه های تحت پوشش</label>
                 <input id="insurance" type="text" name="insurance" placeholder="بیمه ایران">
             </div>
-            <button style="margin: 0 45% 0 45%; " class="ui button" type="submit">جستجو</button>
+            <button style="margin: 0 45% 0 45%; " class="ui green button" type="submit">جستجو</button>
         </form>
     </div>
 {% endif %}

@@ -1,0 +1,88 @@
+{% load static %}
+<script type="text/javascript">
+    var doctorRating;
+    $('.ui.huge.star.rating')
+            .rating('setting', 'onRate', function (value) {
+                doctorRating = value;
+            });
+    $(document).ready(function () {
+        $(".ui.basic.green.button").click(function () {
+            $.post("pay-for-visit/", $('#'.concat($(this).attr('id').concat('f'))).serialize(), function (data, status) {
+                $('#comment-modal')
+                        .modal('show')
+                ;
+            });
+        });
+    });
+    var commentvalue;
+    $(document).ready(function () {
+        var $el = $('#comment-text');
+        $el.data('oldVal', $el.val());
+        $el.change(function () {
+            var $this = $(this);
+            var newValue = $this.data('newVal', $this.val());
+            commentvalue = newValue.val();
+        });
+    });
+    $(document).ready(function () {
+        $("#submit-comment").click(function () {
+            $.post("submit-comment/", {
+                visitpaymentid: document.getElementsByName('paymentid')[0].value,
+                comment: commentvalue,
+                csrfmiddlewaretoken: document.getElementsByName('csrfmiddlewaretoken')[0].value
+            }, function (data, status) {
+            });
+            $.post("rate-doctor/", {
+                visitpaymentid: document.getElementsByName('paymentid')[0].value,
+                rate: doctorRating,
+                csrfmiddlewaretoken: document.getElementsByName('csrfmiddlewaretoken')[0].value
+            }, function (data, status) {
+            });
+        });
+    });
+
+</script>
+<div class="ui cards" xmlns="http://www.w3.org/1999/html">
+    {% for visit_payment in visits_payment %}
+        <div class="card">
+            <div class="content">
+                <div class="meta">
+                    {{ visit_payment.visitTimeIntervalMap.visitTimeInterval.dailyTimeTable.date }} : تاریخ ملاقات
+                </div>
+                <p>پذیرنده:
+                    دکتر {{ visit_payment.visitTimeIntervalMap.visitTimeInterval.dailyTimeTable.doctor.user.first_name }} {{ visit_payment.visitTimeIntervalMap.visitTimeInterval.dailyTimeTable.doctor.user.last_name }}</p>
+            </div>
+            {% if visit_payment.status %}
+                <div class="description">
+                    <p>
+                        این ملاقات پرداخت شده است.
+                    </p>
+                </div>
+            {% else %}
+                <div class="extra content">
+                    <form method="post" id="{{ visit_payment.id }}f" class="response-form">
+                        {% csrf_token %}
+                        <input type="hidden" value="{{ visit_payment.id }}" name="visit-payment-id">
+                        <input type="number" readonly value="{{ visit_payment.cashAmount }}" name="cash-amount">
+                    </form>
+                    <div class="ui two buttons" id="pay-cash">
+                        <div id="{{ visit_payment.id }}" class="ui basic green button">پرداخت وجه</div>
+                    </div>
+                </div>
+                <input name="paymentid" type="hidden" id="#payment-id" value="{{ visit_payment.id }}">
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+<div hidden class="ui modal" id="comment-modal">
+    <div class="header">نظر خود را درباره این دکتر بنویسید</div>
+    <div class="content">
+        <textarea style="width: 90%;" id="comment-text"></textarea>
+        <div class="ui huge star rating" data-rating="5" data-max-rating="10">به این دکتر امتیاز دهید</div>
+    </div>
+
+    <div class="actions">
+        <div class="ui approve green button" data-icon="/semantic/components/icon/" id="submit-comment">ثبت نظر</div>
+    </div>
+    <div name="csrfmiddlewaretoken" value={% csrf_token %}></div>
+</div>

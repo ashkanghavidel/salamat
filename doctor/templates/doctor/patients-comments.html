@@ -1,0 +1,21 @@
+{% load static %}
+
+<div class="ui comments">
+    {% for patients_comment in patients_comments %}
+        <div class="comment">
+            <div class="content">
+                <a class="author">{{ patients_comment.patient.user.username }}</a>
+                <div class="metadata">
+                    <div class="date">2 days ago</div>
+                    <div class="rating">
+                        <i class="star icon"></i>
+                        5 Faves
+                    </div>
+                </div>
+                <div class="text">
+                    {{ patients_comment.text }}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
