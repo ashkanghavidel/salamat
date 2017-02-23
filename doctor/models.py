@@ -2,12 +2,12 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import User
-# from datetime import datetime
-# from django.utils import timezone
+from django.utils.encoding import python_2_unicode_compatible
 
 DATE_INPUT_FORMATS = '%d-%m-%Y'
 
 
+@python_2_unicode_compatible
 class Office(models.Model):
     address = models.CharField(max_length=150)
     telephone = models.CharField(max_length=12)
@@ -44,7 +44,7 @@ class Doctor(models.Model):
     office = models.OneToOneField(Office,null=True)
     nationalID = models.CharField(max_length=10,unique=True)
     doctorDegree = models.OneToOneField(DoctorDegree)
-    visitDuration = models.IntegerField(default=1,max_length=4,null=True)
+    visitDuration = models.IntegerField(default=1,null=True)
     contractFile = models.FileField(upload_to='media/user_contract',null=True)
     resume = models.FileField(upload_to='media/user_resume',null=True)
     picture = models.ImageField(upload_to='media/user_picture',null=True)
@@ -52,9 +52,6 @@ class Doctor(models.Model):
     def __str__(self):
         return self.user.username
 
-
-# class Document(models.Model):
-#     contractFile = models.FileField(upload_to='media/user_contract')
 
 class DailyTimeTable(models.Model):
     date = models.DateField()
@@ -67,6 +64,7 @@ class DailyTimeTable(models.Model):
         return "%s - %s" % (self.date,self.doctor.nationalID)
 
 
+@python_2_unicode_compatible
 class VisitTimeInterval(models.Model):
     startTime = models.TimeField()
     endTime = models.TimeField()
@@ -77,6 +75,7 @@ class VisitTimeInterval(models.Model):
         return "%s - %s" % (self.startTime,self.endTime)
 
 
+@python_2_unicode_compatible
 class Insurance(models.Model):
     name = models.CharField(max_length=20)
     doctor = models.ForeignKey(Doctor)
@@ -86,15 +85,37 @@ class Insurance(models.Model):
 
 
 class VisitTimeIntervalMap(models.Model):
+    doctor = models.ForeignKey(Doctor,on_delete=models.CASCADE)
     patient = models.ForeignKey('patient.Patient', on_delete=models.CASCADE)
     visitTimeInterval = models.OneToOneField(VisitTimeInterval, on_delete=models.CASCADE)
     status = models.BooleanField(default=False)
     checked = models.BooleanField(default=False)
-# class WorkingSchedule(models.Model):
-#     title = models.CharField(max_length=50,null=True)
-#     doctor = models.ForeignKey('doctor.models.Doctor', on_delete=models.CASCADE)
-#     patient = models.ForeignKey('patient.Patient',on_delete=models.CASCADE,null=True)
-#     visit_date = models.DateField(null=True)
-#     start_hour = models.CharField(max_length=50)
-#     end_hour = models.CharField(max_length=50)
+    isDone = models.BooleanField(default=False)
 
+
+class VisitPayment(models.Model):
+    visitTimeIntervalMap = models.OneToOneField(VisitTimeIntervalMap, on_delete=models.CASCADE)
+    cashAmount = models.FloatField(default=0)
+    status = models.BooleanField(default=False)
+
+
+class PatientComment(models.Model):
+    patient = models.ForeignKey('patient.Patient', on_delete=models.CASCADE)
+    doctor = models.ForeignKey(Doctor,on_delete=models.CASCADE)
+    text = models.TextField()
+
+
+class PatientRate(models.Model):
+    doctor = models.OneToOneField(Doctor, on_delete=models.CASCADE)
+    lastRate = models.IntegerField(default=0)
+    totalRate = models.IntegerField(default=0)
+
+# class PatientRate(models.Model):
+#     doctor = models.OneToOneField(Doctor, on_delete=models.CASCADE)
+#     rate = models.IntegerField(default=0)
+#     __totalRate = models.IntegerField(db_column='totalRate',default=0)
+#
+#     @property
+#     def totalRate(self):
+#         return (self.qty + self.totalRate)/self.numOfrate
+#     numOfrate = models.IntegerField(default=0)
